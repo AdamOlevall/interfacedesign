@@ -39,14 +39,14 @@ function eventWindowLoaded() {
 function mainFunction() {
    
     if (clicks < 9 ){
-    drawScreenG();
+    drawScreenP();
 }
     else{
-        drawScreenB();
+        drawScreenO();
     }
 
 
-    function drawScreenG() {
+    function drawScreenP() {
         
         var theCanvas = document.getElementById('circle');
 
@@ -60,14 +60,14 @@ function mainFunction() {
 
             ctx.beginPath();
              ctx.arc(100,100,50,0,2*Math.PI,false);
-             ctx.fillStyle = 'lightGreen';
+             ctx.fillStyle = '#DC00BF';
              ctx.fill();
              ctx.stroke();        
 
         }
     }
 
-    function drawScreenB() {
+    function drawScreenO() {
         
         var theCanvas = document.getElementById('circle');
 
@@ -80,8 +80,8 @@ function mainFunction() {
             var ctx = theCanvas.getContext("2d");
 
              ctx.beginPath();
-             ctx.arc(100,100,50,0,2*Math.PI,false);
-             ctx.fillStyle = 'lightBlue';
+             ctx.arc(100,100,50,0,2*Math.PI,true);
+             ctx.fillStyle = '#DE881E';
              ctx.fill();
              ctx.stroke();  
 
