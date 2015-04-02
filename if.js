@@ -4,17 +4,19 @@ ctx.font = "30px Arial";
 ctx.fillText("Hello World",10,50); */
 
 
-	// draw the cloud
+/// draw the image
 function draw() {
-      var canvas = document.getElementById('myCanvas');
+     var canvas = document.getElementById('myCanvas');
      var context = canvas.getContext('2d'); 
+     
+///draw the box
       context.rect(0,0,1000,1000);
       context.fillStyle="blue";
-	context.fill();
+      context.fill();
 
-}
- function drawcloud() {
-      // begin custom shape
+
+///draw the cloud
+
       context.beginPath();
       context.moveTo(170, 80);
       context.bezierCurveTo(130, 100, 130, 150, 230, 150);
@@ -24,14 +26,33 @@ function draw() {
       context.bezierCurveTo(320, 5, 250, 20, 250, 50);
       context.bezierCurveTo(200, 5, 150, 20, 170, 80);
 
-      // complete custom shape
-      context.closePath();
+/// complete custom shape
+      
       context.lineWidth = 5;
       context.fillStyle = '#8ED6FF';
       context.fill();
       context.strokeStyle = 'blue';
       context.stroke();
+
+
+//draw the waves
+
+      context.beginPath();
+      context.moveTo(0, 380);
+      context.bezierCurveTo(5, 360, 10, 340, 40, 380);
+      context.moveTo(40, 380);
+      context.bezierCurveTo(45, 360, 50, 340, 80, 380);
+      context.moveTo(40, 380);
+
+      context.lineWidth = 5;
+      context.fillStyle = '#8ED6FF';
+       context.fill();
+      context.strokeStyle = 'white';
+      context.stroke();
 }
+
+
+
 
 /*
 function makefish() {
@@ -42,23 +63,7 @@ function makefish() {
 
 } */
 
- context.beginPath();
-      context.moveTo(0, 380);
-     // context.quadraticCurveTo(100, 300, 200, 380);
-      context.bezierCurveTo(5, 360, 10, 340, 40, 380);
-      context.moveTo(40, 380);
-      context.bezierCurveTo(45, 360, 50, 340, 80, 380);
-      context.moveTo(40, 380);
 
-     // context.closePath();
-      context.lineWidth = 5;
-      context.fillStyle = '#8ED6FF';
-      context.fill();
-      context.strokeStyle = 'white';
-      context.stroke();
-
-*/
-    
 /*
 
 
