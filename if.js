@@ -3,13 +3,17 @@ var ctx = c.getContext("2d");
 ctx.font = "30px Arial";
 ctx.fillText("Hello World",10,50); */
 
-/*
+
 	// draw the cloud
+function draw() {
       var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d'); 
+     var context = canvas.getContext('2d'); 
+      context.rect(0,0,1000,1000);
+      context.fillStyle="blue";
+	context.fill();
 
-
-
+}
+ function drawcloud() {
       // begin custom shape
       context.beginPath();
       context.moveTo(170, 80);
@@ -27,10 +31,16 @@ ctx.fillText("Hello World",10,50); */
       context.fill();
       context.strokeStyle = 'blue';
       context.stroke();
+}
 
+/*
+function makefish() {
+ base_image = new Image();
+  base_image.src = 'guldfisk.png';
+  base_image.onload = function(){
+    context.drawImage(base_image, 100, 100);
 
-
-makefish();
+} */
 
  context.beginPath();
       context.moveTo(0, 380);
@@ -47,9 +57,9 @@ makefish();
       context.strokeStyle = 'white';
       context.stroke();
 
-
+*/
     
-
+/*
 
 
 function makefish() {

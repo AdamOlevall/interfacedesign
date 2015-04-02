@@ -1,21 +1,27 @@
 
 <html>
 <head>
+	<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/if.css">
 <script src="javascript/if.js"></script>
-<link rel="stylesheet" type="text/css" href="css/if.css">
+
 </head>
 
-<body id="body">
+<body id="body" onload="draw();">
 	<header id="header">
 		<div id="title"> If the cloud is blue, click at the ... else click at the ... </div>
-	</header>
+	</header> 
 <div id="canvas">
 <canvas id="myCanvas" width="1000" height="400" style="border:1px solid #000000;"></canvas>	
+<!--
 <script>
 
 		// draw the cloud
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d'); 
+      context.rect(0,0,1000,1000);
+      context.fillStyle="blue";
+	context.fill();
 
 
 
@@ -62,8 +68,8 @@
 
     
 
-</script> 
+</script> -->
 
-</div>
+ </div> 
 </body>
 </html>
