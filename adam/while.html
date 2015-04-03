@@ -5,21 +5,109 @@
     <link href="while.css" rel="stylesheet">
     <script type="text/javascript" src="while.js"></script>
 
-    <title></title>
+ 
 </head>
 <body>
-	<div class = "rubrik">
-<h1>While the circle is purple, push "Quack". Otherwise, push "Mjau"</h1>
+
+<div class = "rubrik">
+<h1>While the circle is purple, drag Froggy to the MeatKvarn . Otherwise, set him free into the woods</h1>
 </div>
-<div class = "knappar">
-<button class = "btn" type ="button" onClick="myCounter()"> Quack </button>
-<button class ="btn2" type ="button" onClick="myFinish()"> Mjau</button>
- <p><img src="froggy.png" alt="Groda"   draggable="true" ondragstart="drag(event)"  style="width:100px;height:80px" align = "middle" ></p>
+
+<div>
+    <div style="float:left">
+        <img id="draggable1" src="froggy.png" draggable="true" style="border: none; width:150px;">
+    </div>
+
+    <div id="dropZone1" style="float: left; width: 175px; height: 100px; border: 1px solid rgb(204, 204, 204); padding: 10px;">
+<img  src="meatkvarn.png"  style="border: none; width:150px;">
+    </div>
+    <div id="dropZone2" style="float: left; width: 175px; height: 100px; border: 1px solid rgb(204, 204, 204); padding: 10px;"><img  src="tree.png"  style="border: none; width:150px;"></div>
+    
+    <div style="float:left; margin-left: 20px; padding: 10px;">
+        drop:      <span id="dropCount"></span><br>
+    </div>
 </div>
-<canvas id="circle" width="400px" height="400px" style="margin-left: 42%; margin-top: -10%;">
+
+<script>
+    var counts = { dragstart : 1, dragend : 1, dragenter : 1, dragover : 1, dragleave : 1, drop : 1 };
+
+    var draggable = document.getElementById("draggable1");
+
+    draggable.addEventListener('dragstart', dragStart, false);
+    draggable.addEventListener('dragend'  , dragEnd  , false);
+
+    var droptarget = document.getElementById("dropZone1");
+    var droptarget2 = document.getElementById("dropZone2");
+
+    droptarget.addEventListener('dragenter', dragEnter  , false);
+    droptarget.addEventListener('dragover' , dragOver   , false);
+    droptarget.addEventListener('dragleave', dragLeave  , false);
+    droptarget.addEventListener('drop'     , drop       , false);
+     
+
+     droptarget2.addEventListener('dragenter', dragEnter  , false);
+    droptarget2.addEventListener('dragover' , dragOver   , false);
+    droptarget2.addEventListener('dragleave', dragLeave  , false);
+    droptarget2.addEventListener('drop'     , drop2       , false);
+
+
+    function dragStart(event) {
+        event.dataTransfer.setData('text/html', "You dragged the image!");
+        event.target.style.border = "1px solid #cccccc";
+    }
+    function dragEnd(event) {
+        event.target.style.border = "none";
+    }
+    function dragEnter(event) {
+        event.target.style.border = "2px dashed #00cc00";
+    }
+    function dragOver(event) {
+        event.preventDefault();
+    }
+    function dragLeave(event) {
+        event.target.style.border = "1px solid #cccccc";
+    }
+    function drop(event) {
+         event.preventDefault();
+        console.log("drop called");
+        document.getElementById("dropCount").innerHTML = counts.drop++;
+        var data = event.dataTransfer.getData('text/html');
+        event.target.style.border = "1px solid #cccccc";
+        mainFunction();
+        if (counts.drop > 10){
+        	alert("You lost");
+        	  location.reload();
+        }
+     
+    }
+
+      function drop2(event) {
+        event.preventDefault();
+        console.log("drop called");
+        document.getElementById("dropCount").innerHTML = counts.drop++;
+        var data = event.dataTransfer.getData('text/html');
+        event.target.style.border = "1px solid #cccccc";
+         if (counts.drop > 10){
+        	alert("You Won!");
+        	  location.reload();
+        }
+        else{
+        	alert("You lost");
+        	  location.reload();
+        }
+       
+    }
+
+</script>
+
+
+
+<canvas id="circle">
 
     Unfortunately, your browser does not seem to support the canvas element.
 </canvas>
-<p><a id="clicks"></a></p>
+
+
+
 </body>
 </html>

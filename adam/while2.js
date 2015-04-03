@@ -1,3 +1,32 @@
+var clicks = 0;
+
+function myCounter(){
+
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+    mainFunction();
+   if (clicks > 9){
+    alert("You lost!!");
+ location.reload();
+}
+
+}
+
+
+function myFinish(){
+
+if(clicks > 8){
+    alert("You won!!");
+        location.reload();
+}
+else {
+    alert("You lost!!");
+ location.reload();
+}
+}
+
+
+
 
 window.addEventListener("load", eventWindowLoaded, false);
 
@@ -8,7 +37,7 @@ function eventWindowLoaded() {
 
 function mainFunction() {
    
-    if (document.getElementById("dropCount").innerHTML < 9 ){
+    if (document.getElementById("clicks").innerHTML < 9 ){
     drawScreenP();
 }
     else{
