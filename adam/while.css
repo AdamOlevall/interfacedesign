@@ -8,6 +8,29 @@
 	padding: 15px;
 
 }
+#circle{
+  width:200px;
+  height:100px;
+  
+  float: center;
+
+ 
+}
+#droppa {
+ float:right;
+  width:200px;
+  height:150px;
+ padding-left: 50px;
+  border:1px solid #aaaaaa;
+    margin-top: 10px;
+}
+
+#droppa:hover {
+
+ 
+  border:3px solid #000000;
+}
+
 
 .btn {
 
@@ -55,3 +78,4 @@
   background: #edadcc;
   text-decoration: none;
 }
+
