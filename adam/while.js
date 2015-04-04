@@ -14,7 +14,7 @@ function mainFunction() {
     else{
         drawScreenO();
     }
-
+//Draw part//
 
     function drawScreenP() {
         
