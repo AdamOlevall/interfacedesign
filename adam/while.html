@@ -1,113 +1,223 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <link href="while.css" rel="stylesheet">
-    <script type="text/javascript" src="while.js"></script>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>While</title>
 
- 
+    <link rel="stylesheet" href="reset.css">
+    <link href="while.css" rel="stylesheet">
+    <link href="groda.css" rel="stylesheet">
+    <script  src="while.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
 </head>
 <body>
-
+  
 <div class = "rubrik">
-<h1>While the circle is purple, drag Froggy to the MeatKvarn . Otherwise set him free into the woods</h1>
+<h1>While the circle is white, put Froggy in the woods . Otherwise set him free into the desert</h1>
 </div>
 
-<div>
-    <div style="float:left">
-        <img id="draggable1" src="froggy.png" draggable="true" style="border: none; width:150px;">
-    </div>
 
-    <div id="dropZone1" style="float: left; width: 175px; height: 100px; border: 1px solid rgb(204, 204, 204); padding: 10px;">
-<img  src="meatkvarn.png"  style="border: none; width:150px;">
+
+
+    <div class="container">
+               
+        <div id="dd-elements" class="clearfix">
+            <ul id="drag-elements">
+                <li draggable="true"><div class="mike">
+  <div class="head">
+    <div class="eyes">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
     </div>
-    <div id="dropZone2" style="float: left; width: 175px; height: 100px; border: 1px solid rgb(204, 204, 204); padding: 10px;"><img  src="tree.png"  style="border: none; width:150px;"></div>
-    
-    <div style="float:left; margin-left: 20px; padding: 10px;">
+    <div class="nose">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body">
+    <div class= "innerbody">
+    </div>
+     <div class = "foot"></div>
+<div class = "foot"></div>
+</div>
+</div></li>
+        <li draggable="true"> 
+        <div class="mike">
+  <div class="head2">
+    <div class="eyes2">
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball2"></div>
+      <div class="ball2"></div>
+    </div>
+    <div class="mouth2"></div>
+  </div>
+  <div class="body2">
+    <div class= "innerbody2">
+    </div>
+ <div class = "foot2"></div>
+<div class = "foot2"></div>
+</div>
+</div></li>
+          
+                <li draggable="true"><div class="mike">
+  <div class="head2">
+    <div class="eyes2">
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball2"></div>
+      <div class="ball2"></div>
+    </div>
+    <div class="mouth2"></div>
+  </div>
+  <div class="body2">
+    <div class= "innerbody2">
+    </div>
+ <div class = "foot2"></div>
+<div class = "foot2"></div>
+</div>
+</div</li>
+                <li draggable="true"> <div class="mike">
+  <div class="head">
+    <div class="eyes">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body">
+    <div class= "innerbody">
+    </div>
+     <div class = "foot"></div>
+<div class = "foot"></div>
+</div>
+</div></li>
+         
+               <li draggable="true"> <div class="mike">
+  <div class="head">
+    <div class="eyes">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body">
+    <div class= "innerbody">
+    </div>
+    <div class = "foot"></div>
+<div class = "foot"></div>
+ </div>
+</div></li>
+<li draggable="true"><div class="mike">
+  <div class="head2">
+    <div class="eyes2">
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball2"></div>
+      <div class="ball2"></div>
+    </div>
+    <div class="mouth2"></div>
+  </div>
+  <div class="body2">
+    <div class= "innerbody2">
+    </div>
+ <div class = "foot2"></div>
+<div class = "foot2"></div>
+</div>
+</div</li>
+            </ul>
+            <div id ="dropZones">
+            <div id="drop-target-one">
+                <canvas id="e" width="320" height="100"></canvas>
+                
+            </div>
+
+            <div id="drop-target-two">
+                <canvas id="g" width="100" height="100"></canvas>
+                <canvas id="h" width="100" height="100"></canvas>
+                <canvas id="i" width="100" height="100"></canvas>
+            </div>
+        </div>
+        </div>
+
+        
+
+        <div style="float:left; margin-left: 20px; padding: 10px;">
         drop:      <span id="dropCount"></span><br>
     </div>
-</div>
+
+  <canvas id="circle6" width="200" height="100"></canvas>
+
+
+
 
 <script>
-    var counts = { dragstart : 1, dragend : 1, dragenter : 1, dragover : 1, dragleave : 1, drop : 1 };
+  var canvas = document.getElementById("e");
+  /* var canvas2 = document.getElementById("f");*/
+   var canvas3 = document.getElementById("g");
+   var canvas4= document.getElementById("h");
+   var canvas5= document.getElementById("i");
+  var context = canvas.getContext("2d");
+  //var context2 = canvas2.getContext("2d");
+  var context3 = canvas3.getContext("2d");
+  var context4 = canvas4.getContext("2d");
+  var context5 = canvas5.getContext("2d");
+  var tree = new Image();
+  var cactus= new Image();
 
-    var draggable = document.getElementById("draggable1");
-
-    draggable.addEventListener('dragstart', dragStart, false);
-    draggable.addEventListener('dragend'  , dragEnd  , false);
-
-    var droptarget = document.getElementById("dropZone1");
-    var droptarget2 = document.getElementById("dropZone2");
-
-    droptarget.addEventListener('dragenter', dragEnter  , false);
-    droptarget.addEventListener('dragover' , dragOver   , false);
-    droptarget.addEventListener('dragleave', dragLeave  , false);
-    droptarget.addEventListener('drop'     , drop       , false);
-     
-
-     droptarget2.addEventListener('dragenter', dragEnter  , false);
-    droptarget2.addEventListener('dragover' , dragOver   , false);
-    droptarget2.addEventListener('dragleave', dragLeave  , false);
-    droptarget2.addEventListener('drop'     , drop2       , false);
-
-
-    function dragStart(event) {
-        event.dataTransfer.setData('text/html', "You dragged the image!");
-        event.target.style.border = "1px solid #cccccc";
-    }
-    function dragEnd(event) {
-        event.target.style.border = "none";
-    }
-    function dragEnter(event) {
-        event.target.style.border = "2px dashed #00cc00";
-    }
-    function dragOver(event) {
-        event.preventDefault();
-    }
-    function dragLeave(event) {
-        event.target.style.border = "1px solid #cccccc";
-    }
-    function drop(event) {
-         event.preventDefault();
-        console.log("drop called");
-        document.getElementById("dropCount").innerHTML = counts.drop++;
-        var data = event.dataTransfer.getData('text/html');
-        event.target.style.border = "1px solid #cccccc";
-        mainFunction();
-        if (counts.drop > 10){
-        	alert("You lost");
-        	  location.reload();
-        }
-     
-    }
-
-      function drop2(event) {
-        event.preventDefault();
-        console.log("drop called");
-        document.getElementById("dropCount").innerHTML = counts.drop++;
-        var data = event.dataTransfer.getData('text/html');
-        event.target.style.border = "1px solid #cccccc";
-         if (counts.drop > 10){
-        	alert("You Won!");
-        	  location.reload();
-        }
-        else{
-        	alert("You lost");
-        	  location.reload();
-        }
-       
-    }
-
+  cactus.src="cactus.png";
+  tree.src = "tree.png";
+  tree.onload = function() {
+    context.drawImage(tree, 0, 0, 300,100);
+  //  context2.drawImage(tree, 0, 0, 300,100);
+  };
+  cactus.onload = function() {
+    context3.drawImage(cactus, 0, 0, 100,100);
+    context4.drawImage(cactus, 0, 0, 100,100);
+      context5.drawImage(cactus, 0, 0, 100,100);
+    
+  };
 </script>
-
-
-
-<canvas id="circle">
-
-    Unfortunately, your browser does not seem to support the canvas element.
-</canvas>
-
-
-
 </body>
 </html>
