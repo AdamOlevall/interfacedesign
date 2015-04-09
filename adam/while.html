@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>While</title>
-
+    <audio id="frog" src="frog.mp3" preload="auto"></audio>
+     <audio id="lose" src="lose.mp3" preload="auto"></audio>
+      <audio id="mario" src="mario.mp3" preload="auto"></audio>
     <link rel="stylesheet" href="reset.css">
     <link href="while.css" rel="stylesheet">
     <link href="groda.css" rel="stylesheet">
@@ -16,6 +18,7 @@
   
 <div class = "rubrik">
 <h1>While the circle is white, put Froggy in the woods . Otherwise set him free into the desert</h1>
+<h4>drop:      <span id="dropCount"></span><br></h4>
 </div>
 
 
@@ -168,56 +171,58 @@
 </div</li>
             </ul>
             <div id ="dropZones">
-            <div id="drop-target-one">
+            
                 <canvas id="e" width="320" height="100"></canvas>
                 
-            </div>
+            <canvas id="f" width="320" height="100"></canvas>
 
-            <div id="drop-target-two">
-                <canvas id="g" width="100" height="100"></canvas>
-                <canvas id="h" width="100" height="100"></canvas>
-                <canvas id="i" width="100" height="100"></canvas>
-            </div>
+         
         </div>
         </div>
 
         
 
-        <div style="float:left; margin-left: 20px; padding: 10px;">
-        drop:      <span id="dropCount"></span><br>
-    </div>
+        
 
-  <canvas id="circle6" width="200" height="100"></canvas>
+  <canvas id="circle" width="200" height="100"></canvas>
 
 
 
 
-<script>
-  var canvas = document.getElementById("e");
-  /* var canvas2 = document.getElementById("f");*/
-   var canvas3 = document.getElementById("g");
-   var canvas4= document.getElementById("h");
-   var canvas5= document.getElementById("i");
-  var context = canvas.getContext("2d");
-  //var context2 = canvas2.getContext("2d");
-  var context3 = canvas3.getContext("2d");
-  var context4 = canvas4.getContext("2d");
-  var context5 = canvas5.getContext("2d");
-  var tree = new Image();
-  var cactus= new Image();
+  <script>
 
-  cactus.src="cactus.png";
-  tree.src = "tree.png";
-  tree.onload = function() {
-    context.drawImage(tree, 0, 0, 300,100);
-  //  context2.drawImage(tree, 0, 0, 300,100);
+         var canvas = document.getElementById("e");
+        var canvas2 = document.getElementById("f");
+        
+
+        // Checking that the Canvas is instantiated properly before we try to use it.
+        //
+      
+
+            // Painting is done in the 2d context, so we check for that as well, before we use it.
+            //
+            
+            
+
+       
+        var context = canvas.getContext("2d");
+  
+        var context2 = canvas2.getContext("2d");
+        
+        var tree = new Image();
+      var cactus= new Image();
+
+        cactus.src="cactus.png";
+        tree.src = "tree.png";
+               tree.onload = function() {
+        context.drawImage(tree, 0, 0, 300,100);
+  
   };
-  cactus.onload = function() {
-    context3.drawImage(cactus, 0, 0, 100,100);
-    context4.drawImage(cactus, 0, 0, 100,100);
-      context5.drawImage(cactus, 0, 0, 100,100);
+       cactus.onload = function() {
+        context2.drawImage(cactus, 0, 0, 300,100);
+       
     
   };
-</script>
+  </script>
 </body>
 </html>
