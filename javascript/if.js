@@ -4,6 +4,7 @@ ctx.font = "30px Arial";
 ctx.fillText("Hello World",10,50); */
 
 
+
 /// draw the image
 function draw() {
      var canvas = document.getElementById('myCanvas');
@@ -11,7 +12,7 @@ function draw() {
      
 ///draw the box
       context.rect(0,0,1000,1000);
-      context.fillStyle="blue";
+      context.fillStyle="red";
       context.fill();
 
 
@@ -31,7 +32,7 @@ function draw() {
       context.lineWidth = 5;
       context.fillStyle = '#8ED6FF';
       context.fill();
-      context.strokeStyle = 'blue';
+      context.strokeStyle = 'red';
       context.stroke();
 
 

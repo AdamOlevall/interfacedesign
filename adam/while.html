@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>While</title>
+    <audio id="frog" src="frog.mp3" preload="auto"></audio>
+     <audio id="lose" src="lose.mp3" preload="auto"></audio>
+      <audio id="mario" src="mario.mp3" preload="auto"></audio>
+    <link rel="stylesheet" href="reset.css">
     <link href="while.css" rel="stylesheet">
-    <script type="text/javascript" src="while.js"></script>
+    <link href="groda.css" rel="stylesheet">
+    <script  src="while.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
+
+<<<<<<< HEAD
  
 </head>
 <body>
@@ -109,5 +118,216 @@
 
 
 
+</head>
+<body>
+  
+<div class = "rubrik">
+<h1>While the circle is white, put Froggy in the woods . Otherwise set him free into the desert</h1>
+<h4>drop:      <span id="dropCount"></span><br></h4>
+</div>
+
+
+
+
+    <div class="container">
+               
+        <div id="dd-elements" class="clearfix">
+            <ul id="drag-elements">
+                <li draggable="true"><div class="mike">
+  <div class="head">
+    <div class="eyes">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body">
+    <div class= "innerbody">
+    </div>
+     <div class = "foot"></div>
+<div class = "foot"></div>
+</div>
+</div></li>
+        <li draggable="true"> 
+        <div class="mike">
+  <div class="head2">
+    <div class="eyes2">
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball2"></div>
+      <div class="ball2"></div>
+    </div>
+    <div class="mouth2"></div>
+  </div>
+  <div class="body2">
+    <div class= "innerbody2">
+    </div>
+ <div class = "foot2"></div>
+<div class = "foot2"></div>
+</div>
+</div></li>
+          
+                <li draggable="true"><div class="mike">
+  <div class="head2">
+    <div class="eyes2">
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball2"></div>
+      <div class="ball2"></div>
+    </div>
+    <div class="mouth2"></div>
+  </div>
+  <div class="body2">
+    <div class= "innerbody2">
+    </div>
+ <div class = "foot2"></div>
+<div class = "foot2"></div>
+</div>
+</div</li>
+                <li draggable="true"> <div class="mike">
+  <div class="head">
+    <div class="eyes">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body">
+    <div class= "innerbody">
+    </div>
+     <div class = "foot"></div>
+<div class = "foot"></div>
+</div>
+</div></li>
+         
+               <li draggable="true"> <div class="mike">
+  <div class="head">
+    <div class="eyes">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body">
+    <div class= "innerbody">
+    </div>
+    <div class = "foot"></div>
+<div class = "foot"></div>
+ </div>
+</div></li>
+<li draggable="true"><div class="mike">
+  <div class="head2">
+    <div class="eyes2">
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+      <div class="eye2">
+        <div class="pupil2"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball2"></div>
+      <div class="ball2"></div>
+    </div>
+    <div class="mouth2"></div>
+  </div>
+  <div class="body2">
+    <div class= "innerbody2">
+    </div>
+ <div class = "foot2"></div>
+<div class = "foot2"></div>
+</div>
+</div</li>
+            </ul>
+            <div id ="dropZones">
+            
+                <canvas id="e" width="320" height="100"></canvas>
+                
+            <canvas id="f" width="320" height="100"></canvas>
+
+         
+        </div>
+        </div>
+
+        
+
+        
+
+  <canvas id="circle" width="200" height="100"></canvas>
+
+
+
+
+  <script>
+
+         var canvas = document.getElementById("e");
+        var canvas2 = document.getElementById("f");
+        
+
+        // Checking that the Canvas is instantiated properly before we try to use it.
+        //
+      
+
+            // Painting is done in the 2d context, so we check for that as well, before we use it.
+            //
+            
+            
+
+       
+        var context = canvas.getContext("2d");
+  
+        var context2 = canvas2.getContext("2d");
+        
+        var tree = new Image();
+      var cactus= new Image();
+
+        cactus.src="cactus.png";
+        tree.src = "tree.png";
+               tree.onload = function() {
+        context.drawImage(tree, 0, 0, 300,100);
+  
+  };
+       cactus.onload = function() {
+        context2.drawImage(cactus, 0, 0, 300,100);
+       
+    
+  };
+  </script>
 </body>
 </html>
