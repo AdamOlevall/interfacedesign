@@ -2,7 +2,6 @@
 window.addEventListener("load", eventWindowLoaded, false);
 
 
-
 function eventWindowLoaded() {
    // mainFunction();
     mainFunction2();
@@ -46,15 +45,6 @@ function mainFunction2(){
          var theCanvas = document.getElementById('circle');
          var ctx = theCanvas.getContext("2d");
 
-function mainFunction() {
-   
-    if (document.getElementById("dropCount").innerHTML < 9 ){
-    drawScreenP();
-}
-    else{
-        drawScreenO();
-    }
-//Draw part//
           ctx.beginPath();
              ctx.arc(75,55,50,0,2*Math.PI,false);
              ctx.fillStyle = '#000000';
@@ -127,7 +117,6 @@ window.onload = function() {
                 e.target.style.background = "#2DF734" ;   
         }
 
-}
        return false;
     });
     // Event Listener for when the dragged element enters the drop zone.
