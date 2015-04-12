@@ -1,0 +1,11 @@
+{
+    "text": {
+        "txt":"Lär dig hur man kodar!",
+    },
+    "btn":{
+        "if":"om",
+        "while":"medan",
+        "for":"för",
+        "all":"ALLA",
+    }
+}

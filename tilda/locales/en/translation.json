@@ -1,0 +1,39 @@
+{
+    "manager": {
+        "title":"The Flying Dutchman",
+        "welcome":"",
+        "order":"",
+        "undo":"UNDO",
+        "redo":"REDO",
+        "cancel":"CANCEL",
+        "userinfo":"Welcome ",
+        "usercredit":"Credit:",
+        "search":"style.placeholder='SEARCH FOR BEER'",
+        "h6":"YOU CAN DRAG THIS TO RATE A BEER",
+        "h4":"ORDER LIST",
+        "footer":"The Flying Dutchman. The best bar in Uppsala!"
+    },
+    "button":{
+        "logout":"LOG OUT",
+        "about":"ABOUT",
+        "settings":"SETTINGS",
+        "help":"HELP",
+        "home":"HOME"
+    },
+    "menuBtn":{
+        "allbeers":"All available beers",
+        "purchases":"Recent purchases",
+        "favorite":"Get your favorites"
+    },
+    "orderbutton":{
+        "pay":"PAY"
+    },
+    "vip_content":{
+        "menuBtn":[
+            "<td>All Beers</td>"
+        ]
+    },
+    "index": {
+        "title": "The Flying Dutchman"
+    }
+}

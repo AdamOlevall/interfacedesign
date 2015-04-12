@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+
+
+		<link id="css" rel="stylesheet" href="css/start.css">
+		<link id="css" rel="stylesheet" href="css/groda.css">
+
+		<script src="javascript/start.js"></script>
+		
+	<!--	<script src="javascript/translate.js"></script>
+		<script src="javascript/i18next.js"></script>
+        <script src="javascript/i18next.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script language="javascript" type="text/javascript" src="javascript/jquery.js"></script> -->
+
+
+	</head>
+
+	<body onload="draw()">
+		<div class="wrapper">
+			<div id="header">
+				<img onclick="changeLanguage()" id="flag" src="images/eng.png">
+				<img onclick="changeLanguage()" id="flag" src="images/swe.png">
+			</div>
+
+			<div id="content">	
+	
+				<div id="titleDiv">
+					<img id="title" src="images/logo.png"></img>
+				</div>
+				<div id="txtDiv">
+					<p id="txt" data-i18n="text.txt"> Let's learn how to code!</p>
+					<p id="txt">Choose one of the following to play with me.</p>
+				</div>
+
+				<div id="buttonDiv">
+					<button class="btn" data-i18n="btn.if">IF</button>
+					<button class="btn" data-i18n="btn.while">WHILE</button>
+					<button class="btn" data-i18n="btn.for">FOR</button>
+					<button class="btn" data-i18n="btn.all">ALL</button>
+
+				</div>
+
+		        <div class="mike">
+	  			<div class="head2">
+	    		<div class="eyes2">
+	      		<div class="eye2">
+	        		<div class="pupil2"></div>
+	      		</div>
+	      		<div class="eye2">
+	        		<div class="pupil2"></div>
+	      		</div>
+	    		</div>
+	    		<div class="nose">
+	      			<div class="ball2"></div>
+	      			<div class="ball2"></div>
+	    		</div>
+	    			<div class="mouth2"></div>
+	  			</div>
+	  			<div class="body2">
+	    		<div class= "innerbody2">
+	    		</div>
+	 			<div class = "foot2"></div>
+				<div class = "foot2"></div>
+				</div>
+				</div>
+				<div id="aniDiv">
+					<canvas id="balloon"></canvas>
+					<div id="txtBalloon">
+						<p>Need help?<br>
+					 	Click on me!</p>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</body>
+</html>
