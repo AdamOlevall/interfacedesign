@@ -2,16 +2,68 @@
 <head>
       <meta charset="utf-8"/>
 <link rel="stylesheet" href="if.css">
+<link id="css" rel="stylesheet" href="groda.css">
+<link id="css" rel="stylesheet" href="bird.css">
 <script type="text/javascript" src="if.js"></script>
+  <audio id="frog" src="frog.mp3" preload="auto"></audio>
+     <audio id="lose" src="lose.mp3" preload="auto"></audio>
+      <audio id="mario" src="mario.mp3" preload="auto"></audio>
+
 
 </head>
 
-<body id="body" onload="draw();">
-      <header id="header">
-            <div id="title"> If the cloud is blue, click at the ... else click at the ... </div>
+<body id="body" onload="draw(randomNumber)">
+    <header id="header">
+            <div id="title"> If the cloud is blue, click at the blue botton else click at the white button </div>
       </header> 
+  <!-- <div id="title"> If the cloud is blue, click at the ... else click at the ... </div> -->
+<embed src="Bofink.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+
+<div id="content">  </div>     
+
 <div id="canvas">
-<canvas id="myCanvas" width="1000" height="400" style="border:1px solid #000000;"></canvas>   
+<canvas id="myCanvas" width="500" height="180" > </canvas>  
+ </div> 
+ <img src="http://s15.postimage.org/kozhy0eon/pajaro.gif" id="pajaro" class="piopio">
+
+
+<button class="btn" onclick="cloudColorBlue(randomNumber)">Blue Cloud</button>
+<button class="btn1" onclick="cloudColorWhite(randomNumber)">White Cloud</button>
+<div class="mike">
+  <div class="head">
+    <div class="eyes">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+    <div class="nose">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="body">
+    <div class= "innerbody">
+    </div>
+     <div class = "foot"></div>
+<div class = "foot"></div>
+</div>
+</div></li>
+
+
+<div class="bubble">
+<p>Need help?<br>
+Click on me!</p>
+</div>
+
+
+
+
 <!--
 <script>
 
@@ -69,6 +121,7 @@
 
 </script> -->
 
- </div> 
+
+
 </body>
 </html>
