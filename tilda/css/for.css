@@ -1,30 +1,55 @@
+.wrapper{
+	background-image: url("../images/grass.jpg");
+
+	background-repeat: no-repeat;
+	/*width: 1420px;
+	height: 700px;*/
+		width: 100%;
+		height: 750px;
+		width: 100%;
+	height: 750px;
+	/*height: 100%;*/
+}
 
 #header {
-	position: absolute;
-	background-color: white;
+	background-color: none;
 	width: 100%;
-	height: 50px;
-	
+	height: 40px;
+	display: inline-block;
 }
 
-#myCanvas {
+#content {
+	background: rgba(255, 255, 255, 0.3);
 	position: relative;
-	top: 100px;
-	left: 300px;
-	/*width: 578px;
-	height: 200px;*/
-	border-color: black;
-	border-style: solid;
+	top: 0%;
+	left: 7%;
+	width: 85%;
+	right: 7%;
+	height: 86%;
+	/*margin-right: 7%;*/
+
+	display: inline-block;
+	border-radius: 30px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
 }
 
-#image{
+#txt {
 	position: relative;
-	top: 100px;
-	left: 100px;
-
+	width: 100%;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 2vmin;
+	text-align: center;
+	margin-top: 5%;
 }
+
+#flowerDiv {
+	background-color: white;
+	width: 80%;
+	height: 50%;
+}
+
 #flower {
+background-color: red;
 
-	width: 50px;
-	height: 50px;
 }
