@@ -77,16 +77,96 @@
 	font-family: "Lucida Console", Monaco, monospace;
 
 }
+
 #buttonDiv {
 	position: relative;
-	margin-top: 2%;
-	left: 25%;
-	width: 50%;
+	margin-top: 4%;
+	left: 15%;
+	width: 65%;
+	display: inline-block;
+	margin-bottom: 0%;
+
+}
+
+#stumptxtDiv {
+	background-color: red;
+	position: absolute;
+	left:15%;
+	width: 65%;
 	display: inline-block;
 	/*padding-top: 1%;*/
+	margin-top: 12%;
 }
 
 
+#stumptxtIF {
+	display: inline-block;
+/*	margin-left: 14%;
+	margin-right: 4%;*/
+	position: absolute;
+	top: 90%;
+	left: 14%;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 2vmin;
+}
+
+#stumptxtWHILE {
+	display: inline-block;
+/*	margin-left: 14%;
+	margin-right: 4%;*/
+	position: absolute;
+	top: 90%;
+	left: 36%;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 2vmin;
+}
+
+#stumptxtFOR {
+	display: inline-block;
+/*	margin-left: 14%;
+	margin-right: 4%;*/
+	position: absolute;
+	top: 90%;
+	left: 61%;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 2vmin;
+}
+
+#stumptxtALL {
+	display: inline-block;
+/*	margin-left: 14%;
+	margin-right: 4%;*/
+	position: absolute;
+	top: 90%;
+	left: 85%;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 2vmin;
+}
+
+/*
+#stumpDiv {
+	position: relative;
+	margin-top: 0%;
+	left: 0%;
+	width: 100%;
+	display: inline-block;
+}
+*/
+.stump {
+	width: 13%;
+	height: 13%;
+	display: inline-block;
+	position: relative;
+  	/*top:20%; */
+  	left: 9%;
+  	margin-right: 10%;
+  	cursor: pointer;
+}
+
+.stump:hover {
+  transform: scale(1.4);
+}
+/*
 .btn {
   -webkit-border-radius: 17;
   -moz-border-radius: 17;
@@ -103,7 +183,7 @@
   width: 11%;
   
   position: relative;
-  /*top:20%; */
+
   left: 9%;
   margin-right: 10%;
   cursor: pointer;
@@ -116,7 +196,7 @@
   border-color: #FFF6C4;
   border: none;
 }
-
+*/
 #aniDiv {
 	display: inline-block;
 	position: relative;
