@@ -1,25 +1,38 @@
 /*var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.font = "30px Arial";
-ctx.fillText("Hello World",10,50); */
-var img = new Image();
-img.src = 'guldfisk.png';
-img.onload = function() {
-    draw(this); 
-};
+var ctx = c.getContext("2d");*/
+//ctx.font = "30px Arial";
+//ctx.fillText("Hello World",10,50); 
+//var img = new Image();
+function play_single_sound() {
+        document.getElementById('frog').play();
+}
 
+function play_single_sound2() {
+        document.getElementById('lose').play();
+}
+
+function play_single_sound3() {
+        document.getElementById('mario').play();
+}
+
+//img.src = 'guldfisk.png';
+/*img.onload = function() {
+    draw(this); 
+}; */
 /// draw the image
-function draw(img) {
+
+var randomNumber = Math.floor((Math.random() * 10) + 1);
+
+
+function draw(randomNumber) {
      var canvas = document.getElementById('myCanvas');
      var context = canvas.getContext('2d'); 
-      var centerX = canvas.width / 1.2;
-      var centerY = canvas.height / 3;
-      var radius = 70;
-      var fillcolor = 'yellow';
-
+    // var numb = Math.floor((Math.random() * 10) + 1);
+     setInterval(animation, 30);
+   
 ///draw the box
       context.rect(0,0,1000,1000);
-      context.fillStyle="blue";
+      context.fillStyle="rgba(0, 0, 0, 0)";
       context.fill();
 
 
@@ -34,8 +47,9 @@ function draw(img) {
       context.bezierCurveTo(320, 5, 250, 20, 250, 50);
       context.bezierCurveTo(200, 5, 150, 20, 170, 80);
 
+
 /// complete custom shape
-      var numb = Math.floor((Math.random() * 10) + 1);
+var numb = randomNumber;
       context.lineWidth = 5;
 // choose color for the cloud and fill it
 if (numb < 6) {
@@ -47,7 +61,6 @@ if (numb < 6) {
       context.fill();
       context.strokeStyle = '#2ECCFA';
       context.stroke();
-
       //the fish
     base_image = new Image();
   base_image.src = 'guldfisk.png';
@@ -71,35 +84,15 @@ if (numb < 6) {
       context.stroke();
 
 
-    context.beginPath();
-    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    context.fillStyle = fillcolor;
-    context.fill();
-   /* context.lineWidth = linewidth;
-    context.strokeStyle = strokestyle;
-    context.stroke();
-     
-    context.fillStyle = fontcolor;
-    context.textAlign = textalign;
-    context.font = fonttype;
-     
-    context.fillText(filltext, x, y);    */ 
-};
-
-// SOLEN
-      /*
+// DRAW SUN
+     /*  var centerX = canvas.width / 1.2;
+      var centerY = canvas.height / 3;
+      var radius = 70;
 
       context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = 'yellow';
+     context.fillStyle = 'yellow';
       context.fill();
-*/
-/* var Circle = function(centerX, centerY, radius) {
-    this.left = centerX - radius;
-    this.top = centerY - radius;
-    this.right = centerX + radius;
-    this.bottom = centerY + radius;
-}; */
 
           context.beginPath();
       context.moveTo(760, 70);
@@ -109,11 +102,41 @@ if (numb < 6) {
          context.beginPath();
       context.moveTo(740, 130);
       context.lineTo(580, 100);
-      context.stroke();
+      context.stroke(); */
      // context.lineWidth = 5;
     //  context.strokeStyle = '#003300';
    //   context.stroke();
-} /*
+   //return numb;
+}
+
+function cloudColorBlue(randomNumber) {
+var nummer = randomNumber;
+if (nummer < 6) {
+ play_single_sound3();
+  alert("Very good");
+
+}
+else {
+   play_single_sound2(); 
+  alert("Wrong");
+
+}
+
+}
+function cloudColorWhite(randomNumber) {
+var nummer = randomNumber;
+if (nummer < 6) {
+ play_single_sound2(); 
+ alert("Wrong");
+
+}
+else {
+  play_single_sound3();
+  alert("Very Good");
+
+}
+
+}
 var degrees = 0;
 
 function animation(){
@@ -137,7 +160,7 @@ function animation(){
   }
 }
 
-*/
+
 /*
 function makefish() {
  base_image = new Image();
