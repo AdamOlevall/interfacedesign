@@ -48,3 +48,19 @@
 	margin-top: -20%;
 	margin-left: 60%;
 }
+
+
+.start{
+	width: 13%;
+	height: 13%
+	display: inline-block;
+	position: relative;
+	margin-left: 40%;
+  	margin-top: 20%;
+  	cursor: pointer;
+}
+
+.start:hover {
+  transform: scale(1.4);
+  
+}

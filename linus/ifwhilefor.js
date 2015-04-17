@@ -35,7 +35,7 @@ var ball = {},
 
 ball = {
 	//x: W/2,
-	x: 25	,
+	x: 15,
 	y: 185,
 	
 	radius: 15,
@@ -61,6 +61,7 @@ function clearCanvas() {
 }
 
 
+
 function update() {
 	clearCanvas();
 	ball.draw();
@@ -68,14 +69,12 @@ function update() {
 	ball.x += ball.vx;
 	ball.vx += gravity;
 
-	if(ball.x < (W-70)){
-		alert("hej");
-	}
-	else if(ball.x + ball.radius > W) {
-		
+
+	if(ball.x + ball.radius > W) {
 		ball.x = W - ball.radius;
 		//ball.vx *= -bounceFactor;
 	}
+
 
 }
 
