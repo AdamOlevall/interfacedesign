@@ -20,6 +20,10 @@ function play_single_sound3() {
         document.getElementById('mario').play();
 }
 
+function play_single_sound4() {
+        document.getElementById('synth').play();
+}
+
 function mainFunction2(){
      if (document.getElementById("dropCount").innerHTML <2 ){
     drawBall();

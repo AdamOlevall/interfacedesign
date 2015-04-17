@@ -1,30 +1,42 @@
+$(document).ready( function(){
+    //Get the canvas &
+    context var c = $('#flower');
+    var ct = c.get(0).getContext('2d');
+    var container = $(c).parent();
 
-function drawCircle() {
- 	var canvas = document.getElementById('myCanvas');
-    var context = canvas.getContext('2d');
+    //Run function when browser resizes
+    $(window).resize( flower );
 
-      // begin custom shape
-      context.beginPath();
-      context.moveTo(100, 100);
-      context.bezierCurveTo(125, 75, 75, 50, 80, 100);
-      context.bezierCurveTo(60, 80, 50, 100, 70, 120);
+    function flower(){ 
+        c.attr('width', $(container).width() ); //max width
+        c.attr('height', $(container).height() ); //max height
 
-      context.bezierCurveTo(60, 80, 50, 100, 70, 120);
+        draw(); //Call a function to redraw other content (texts, images etc)
+    }
 
-  //  context.quadraticCurveTo(50,125,50,100);
-  //  context.quadraticCurveTo(50,75,100,100);
+    //Initial call 
+    respondCanvas();
 
-//    context.quadraticCurveTo(50,125,80,150);
- //   context.quadraticCurveTo(80,175,100,100);
-     // context.bezierCurveTo(420, 150, 420, 120, 390, 100);
-      //context.bezierCurveTo(430, 40, 370, 30, 340, 50);
-      //context.bezierCurveTo(320, 5, 250, 20, 250, 50);
-      //context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+});
+    
+  
 
-      // complete custom shape
-      context.closePath();
-      context.lineWidth = 5;
-      context.strokeStyle = 'blue';
-      context.stroke();
 
+function draw() {
+        // Filled flower shape
+        var canvas = document.getElementById("flower");
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+ 
+            ctx.beginPath();
+            ctx.moveTo(130.3, 37.6);
+            ctx.bezierCurveTo(126.0, -8.3, 56.3, -16.6, 47.4, 37.6);
+            ctx.bezierCurveTo(-1.4, 33.0, -17.0, 93.7, 21.9, 115.6);
+            ctx.bezierCurveTo(5.6, 158.7, 55.0, 192.7, 88.8, 162.3);
+            ctx.bezierCurveTo(119.3, 191.4, 172.3, 162.0, 155.7, 115.7);
+            ctx.bezierCurveTo(192.0, 98.4, 183.6, 33.7, 130.3, 37.6);
+            ctx.closePath();
+ 
+            ctx.fill();  
+        }
 }
