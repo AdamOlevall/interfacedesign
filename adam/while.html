@@ -6,21 +6,27 @@
     <audio id="frog" src="frog.mp3" preload="auto"></audio>
      <audio id="lose" src="lose.mp3" preload="auto"></audio>
       <audio id="mario" src="mario.mp3" preload="auto"></audio>
+       <audio id="synth" src="synth.mp3" preload="auto"></audio>
+
     <link rel="stylesheet" href="reset.css">
     <link href="while.css" rel="stylesheet">
     <link href="groda.css" rel="stylesheet">
     <script  src="while.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 
 </head>
-<body>
+<body onload="play_single_sound4()">
 
 
 
 <div class="wrapper">
     <div class="container">
-               
+               <div id="txtDiv">
+          <p id="txt" data-i18n="text.txt"> Let's learn how to code!</p>
+          <p id="txt">While there are not any green balls bouncing, put Froggy in the woods. Otherwise, put him in the dessert</p>
+        </div>
         <div id="dd-elements" class="clearfix">
             <ul id="drag-elements">
                 <li draggable="true"><div class="mike">
@@ -93,7 +99,7 @@
  <div class = "foot2"></div>
 <div class = "foot2"></div>
 </div>
-</div</li>
+</div></li>
                 <li draggable="true"> <div class="mike">
   <div class="head">
     <div class="eyes">
@@ -163,8 +169,8 @@
  <div class = "foot2"></div>
 <div class = "foot2"></div>
 </div>
-</div</li>
-            </ul>
+</div></li></ul></div>
+            
             <div id ="dropZones">
             
                 <canvas id="e" width="320" height="100"></canvas>
@@ -173,14 +179,30 @@
 
          
         </div>
+          <div id="circles">
+        <canvas id="circle"></canvas>
+        <canvas id="circle2"></canvas>
+        <canvas id="circle3"></canvas>
+        <canvas id="circle4"></canvas>
+        <canvas id="circle5"></canvas>
+        <canvas id="circle6"></canvas>
+        <canvas id="circle7"></canvas>
         </div>
+        </div>
+          <h4>drop:      <span id="dropCount"></span></h4>
+        </div>
+        
+       
+
 
         
 
         
 
-  <canvas id="circle" width="200" height="100"></canvas>
-<h4>drop:      <span id="dropCount"></span><br></h4>
+        
+
+  
+
 
 
 
@@ -218,6 +240,12 @@
        
     
   };
+
+
+
   </script>
+  
+
+
 </body>
 </html>

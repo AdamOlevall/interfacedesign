@@ -14,7 +14,7 @@ div {
 }
 
 .mike:hover {
-  transform: scale(2);
+  transform:  rotate(1200grad);
   
 }
 
