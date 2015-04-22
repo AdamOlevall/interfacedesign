@@ -17,8 +17,14 @@ function draw() {
     ctx.stroke();
   }
 }
+/*
+function redirectFor() {
 
-function swe() {
-  
-  
-}
+  document.getElementById('body').innerHTML='<object type="text/html" data="for.html" ></object>';
+       document.getElementById('body').src = "../for.html";
+
+    }
+*//*
+  document.getElementById("myButton").onclick = function () {
+        location.href = "www.youtube.com";
+    };*/
