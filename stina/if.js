@@ -15,6 +15,8 @@ function play_single_sound3() {
         document.getElementById('mario').play();
 }
 
+
+
 //img.src = 'guldfisk.png';
 /*img.onload = function() {
     draw(this); 
