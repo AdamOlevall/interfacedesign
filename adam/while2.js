@@ -1,23 +1,26 @@
 var clicks = 0;
-
+var x =  Math.floor((Math.random() * 9) + 1);
+var y = x-1;
+var z = x-2;
 function myCounter(){
 
     clicks += 1;
     document.getElementById("clicks").innerHTML = clicks;
     mainFunction();
-   if (clicks > 9){
+   if (clicks > x){
     alert("You lost!!");
  location.reload();
 }
 
 }
 
+console.log(x);
 
 function myFinish(){
 
-if(clicks > 8){
+if(clicks > y){
     alert("You won!!");
-        location.reload();
+        window.location.href="while.html";
 }
 else {
     alert("You lost!!");
@@ -37,7 +40,7 @@ function eventWindowLoaded() {
 
 function mainFunction() {
    
-    if (document.getElementById("clicks").innerHTML < 9 ){
+    if (document.getElementById("clicks").innerHTML < x ){
     drawScreenP();
 }
     else{

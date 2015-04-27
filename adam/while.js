@@ -22,18 +22,27 @@ function play_single_sound3() {
 
 function play_single_sound4() {
         document.getElementById('synth').play();
-}
+} 
+
+
+var x =  Math.floor((Math.random() * 6) + 1);
+var y = x+1;
+var z = x-2;
+
+    console.log(x);     
+    console.log(y);  
+        console.log(z);  
 
 function mainFunction2(){
-     if (document.getElementById("dropCount").innerHTML <2 ){
+     
     drawBall();
     drawBall2();
     drawBall3();
     drawBall5();
     drawBall6();
     drawBall7();
-}
-    else if (document.getElementById("dropCount").innerHTML > 3 ){
+
+   if ((document.getElementById("dropCount").innerHTML > z) && (document.getElementById("dropCount").innerHTML >= 0)){
         drawBall4();
     }
 
@@ -611,7 +620,7 @@ window.onload = function() {
 
         e.dataTransfer.dropEffect = 'move';
 
-         if(elementDropped<5){
+         if(elementDropped<x){
           e.target.style.border = "10px dashed #FFFFFF";
        e.target.style.background = "#2DF734" ;   
          
@@ -630,7 +639,7 @@ window.onload = function() {
 
         e.dataTransfer.dropEffect = 'move';
 
-        if(elementDropped<5){
+        if(elementDropped<x){
           e.target.style.border = "10px dashed #FFFFFF";
        e.target.style.background = "#F70F0F" ;   
          
@@ -645,7 +654,7 @@ window.onload = function() {
     // Event Listener for when the dragged element enters the drop zone.
     dropZoneOne.addEventListener('dragenter', function(e) {
         this.className = "over";
-         if(elementDropped<5){
+         if(elementDropped<x){
           e.target.style.border = "10px dashed #FFFFFF";
        e.target.style.background = "#2DF734" ;   
          
@@ -658,7 +667,7 @@ window.onload = function() {
    
    dropZoneTwo.addEventListener('dragenter', function(e) {
         this.className = "over";
-        if(elementDropped<5){
+        if(elementDropped<x){
           e.target.style.border = "10px dashed #FFFFFF";
        e.target.style.background = "#F70F0F" ;   
          
@@ -690,11 +699,11 @@ window.onload = function() {
     if (e.stopPropagation) e.stopPropagation(); 
 
         this.className = "";
-       
+           
         document.getElementById("dropCount").innerHTML = elementDropped++;
          document.querySelector('#drag-elements').removeChild(elementDragged);
         
-         if(elementDropped<6){
+         if(elementDropped<y){
            play_single_sound(); 
          
          }
@@ -710,7 +719,7 @@ window.onload = function() {
       
         //elementDragged = null;
         mainFunction2();
-        if (elementDropped >5){
+        if (elementDropped >x){
             alert("You lost");
               location.reload();
         }
@@ -722,7 +731,7 @@ window.onload = function() {
     if (e.stopPropagation) e.stopPropagation(); 
 
         this.className = "";
-        
+       
         document.getElementById("dropCount").innerHTML = elementDropped++;
         //mainFunction();
        
@@ -731,7 +740,7 @@ window.onload = function() {
         //elementDragged = null;
         mainFunction2();
 
-         if(elementDropped<6){
+         if(elementDropped<y){
            play_single_sound2(); 
          
          }
@@ -740,7 +749,7 @@ window.onload = function() {
          }
 
 
-        if (elementDropped <5){
+        if (elementDropped <x){
             alert("You lost");
               location.reload();
         }
