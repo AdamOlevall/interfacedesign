@@ -3,7 +3,7 @@ div {
   box-sizing: border-box;
  
 }
-
+/*
 .mike {
   position: relative;
   left: 7%;
@@ -11,14 +11,14 @@ div {
   width: 10%;
   padding-top: 2%;
   transition: all 1s;
-  /*margin-top: 20px;*/
-}
 
+}*/
+/*
 .mike:hover {
   transform: scale(1.4);
   
 }
-
+*/
 
 .head {
   width: 100px;

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body onload="flower(0,0)">
+    <canvas id="canvas" width="1200" height="300"></canvas>
+<script src="javascript/jquery.js"></script>
+        <script src='javascript/jcanvas.min.js'></script>
+    <script>
+/*.drawArc({
+  layer: true,
+  draggable: true,
+  fillStyle: '#36c',
+  x: 150, y: 150,
+  radius: 50
+})
+.drawRect({
+  layer: true,
+  draggable: true,
+  fillStyle: '#6c1',
+  x: 100, y: 100,
+  width: 100, height: 100
+});*/
+function flower(xoff, yoff) {
+xoff = 38;
+yoff = 41;
+$('canvas').drawBezier({
+  strokeStyle: '#000',
+  strokeWidth: 5,
+  x1: 21+xoff, y1: -17+yoff, // Start point
+  cx1: -8+xoff, cy1: 17+yoff, // Control point
+  cx2: 6+xoff, cy2: 51+yoff,
+  x2: 21 + xoff, y2:-17 + yoff, // Start/end point
+    cx3: 29 + xoff, cx3:108 + yoff, // Control point
+  cx4: 35 + xoff, cx4:109 + yoff,
+  x3: 39 + xoff, x3: 109 + yoff// Control point
+ // x3: 300, y3: 50 // Start/end point
+});
+
+}
+//  ctx.moveTo(38 + xoff, 41 + yoff);
+
+// ctx.bezierCurveTo(21 + xoff, -17 + yoff, -8 + xoff, 17 + yoff, 6 + xoff, 51 + yoff);
+  //ctx.bezierCurveTo(29 + xoff, 108 + yoff, 35 + xoff, 109 + yoff, 39 + xoff, 109 + yoff);
+ // ctx.bezierCurveTo(45 + xoff, 109 + yoff, 49 + xoff, 106 + yoff, 77 + xoff, 47 + yoff);
+ // ctx.bezierCurveTo(92 + xoff, 15 + yoff, 65 + xoff, -13 + yoff, 40 + xoff, 42 + yoff); 
+
+    </script>
+  </body>
+</html>
