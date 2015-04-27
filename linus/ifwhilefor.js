@@ -1,4 +1,5 @@
 // Now some basic canvas stuff. Here we'll make a variable for the canvas and then initialize its 2d context for drawing
+var count = 0;
 window.addEventListener("load", eventWindowLoaded, false);
 
 function eventWindowLoaded(){
@@ -34,7 +35,7 @@ var ball = {},
 // 4) the method to draw or paint it on the canvas
 
 ball = {
-	//x: W/2,
+	
 	x: 15,
 	y: 185,
 	
@@ -43,7 +44,7 @@ ball = {
 	
 	// Velocity components
 	vx: 0.4,
-	vy: 0,
+	//	vy: 0.4,
 	
 	draw: function() {
 		
@@ -66,20 +67,65 @@ function update() {
 	clearCanvas();
 	ball.draw();
 	
-	ball.x += ball.vx;
-	ball.vx += gravity;
-
-
-	if(ball.x + ball.radius > W) {
-		ball.x = W - ball.radius;
-		//ball.vx *= -bounceFactor;
+	if(ball.x > (W-10)){
+		youLost();
+	}else{
+		ball.x += ball.vx;
 	}
-
-
 }
-
 
 setInterval(update, 1000/60);
 
 
+}	
+
+
+
+function flipit(el, check) {
+		flipCount();
+		if(count>1){
+			location.reload();
+			alert("to many flipps");
+		}
+		else{
+        if(check == true){
+        el.children[1].style.webkitTransform = "perspective(600px) rotateY(-180deg)";
+		el.children[0].style.webkitTransform = "perspective(600px) rotateY(0deg)";
+        el.children[1].style.transition = "all .5s linear 0s";
+        el.children[0].style.transition = "all .5s linear 0s";
+        el.children[1].style.transform = "perspective(600px) rotateY(-180deg)";
+        el.children[0].style.transform = "perspective(600px) rotateY(0deg)";
+        el.children[1].style.webkitTransition = "all .5s linear 0s";
+        el.children[0].style.webkitTransition = "all .5s linear 0s";
+        
+        }
+        if(check == false){
+        el.children[1].style.webkitTransform = "perspective(600px) rotateY(0deg)";
+        el.children[0].style.webkitTransform = "perspective(600px) rotateY(180deg)";
+        el.children[1].style.transition = "all .5s linear 0s";
+        el.children[0].style.transition = "all .5s linear 0s";
+        el.children[1].style.transform = "perspective(600px) rotateY(0deg)";
+        el.children[0].style.transform = "perspective(600px) rotateY(180deg)";
+        el.children[1].style.webkitTransition = "all .5s linear 0s";
+        el.children[0].style.webkitTransition = "all .5s linear 0s";
+		}
+
+	}
+		
+
 }
+function flipCount(){
+
+	count += 1;
+
+}
+
+
+function youLost(){
+	location.reload();
+	alert("Lost");
+	
+}
+
+
+   

@@ -58,16 +58,7 @@
 	font-family: "Lucida Console", Monaco, monospace;
 }
 
-#canvas{
-	display: block;
-	margin: 50% auto;
-	border: 3px solid gray;
-	border-radius: 20px;
-	margin-top: -40%;
-	margin-left: 50%;
-	width: 40%;
-	height: 40%;
-}
+
 
 
 .start{
@@ -122,3 +113,33 @@
 	transition: transform .5s linear 0s;
 }
 
+#squareOne{
+	display: block;
+	margin: 50% auto;
+	border: 3px solid gray;
+	border-radius: 20px;
+	margin-top: 2%;
+	margin-left: 10%;
+	width: 80%;
+	height: 80%;
+	float: left;
+}
+#first{
+	width: 20%;
+	height: 40%;
+	margin: 3%;
+	float: left;
+	margin-left: 5%;	
+}
+/*
+#squareTwo{
+	display: block;
+	margin: 50% auto;
+	border: 3px solid gray;
+	border-radius: 20px;
+	margin-top: -75%;
+	margin-left: 8%;
+	width: 40%;
+	height: 80%;
+	float:left;
+}*/
