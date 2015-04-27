@@ -1,4 +1,4 @@
-$(document).ready( function(){
+/*$(document).ready( function(){
     //Get the canvas &
     context var c = $('#flower');
     var ct = c.get(0).getContext('2d');
@@ -19,9 +19,9 @@ $(document).ready( function(){
 
 });
     
-  
+  */
 
-
+/*
 function draw() {
         // Filled flower shape
         var canvas = document.getElementById("flower");
@@ -40,3 +40,102 @@ function draw() {
             ctx.fill();  
         }
 }
+*/
+
+
+
+function flower(xoff, yoff) {
+    var canvas = document.getElementById("canvas");
+
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0,0,1200,300);
+    ctx.beginPath();
+ 
+  ctx.moveTo(38 + xoff, 41 + yoff);
+  ctx.bezierCurveTo(21 + xoff, -17 + yoff, -8 + xoff, 17 + yoff, 6 + xoff, 51 + yoff);
+  ctx.bezierCurveTo(29 + xoff, 108 + yoff, 35 + xoff, 109 + yoff, 39 + xoff, 109 + yoff);
+  ctx.bezierCurveTo(45 + xoff, 109 + yoff, 49 + xoff, 106 + yoff, 77 + xoff, 47 + yoff);
+  ctx.bezierCurveTo(92 + xoff, 15 + yoff, 65 + xoff, -13 + yoff, 40 + xoff, 42 + yoff); 
+
+
+    ctx.closePath();
+
+    //custom heart
+    ctx.lineWidth = 2;
+      ctx.fillStyle = 'red';
+      ctx.fill();
+      ctx.strokeStyle = 'black';
+
+  ctx.stroke();
+
+    xoff+=0.7;
+    var loopTimer = setTimeout('flower('+xoff+','+yoff+'), 100');
+
+  if(xoff > 1200){
+    clearTimeout(loopTimer);
+    flower(0,0);
+    }
+  /*else{
+    clearTimeout(loopTimer);
+    xoff-=1;
+    var loopTimer = setTimeout('flower('+xoff+','+yoff+'), 20');
+  } */
+//  var position = listner();
+ //   console.log(position);
+/*$('canvas').ctx (
+
+  draggable: true,
+ 
+});*/
+
+
+
+}   
+ /*
+function listner() {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext('2d');
+    canvas.addEventListener('mousemove', function(evt) {
+    var mousePos = getMousePos(canvas, evt);
+  //  var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+    var pos = [];
+    pos.push(mousePos.x);
+    pos.push(mousePos.y);
+
+    return pos;
+
+    }, false);
+   
+
+}
+
+ function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+      }
+
+
+
+
+     /*   ctx.save();
+        ctx.clearRect(0,0,550,400);
+        ctx.fillStyle = "rgba(0,200,0,1)";
+        ctx.fillRect(x,20,50,10);
+        */
+   /*     ctx.restore();
+
+        x+=1;
+        y+=1;
+        var loopTimer = setTimeout('flower('+x+','+y+'), 40');
+
+}
+
+
+*/
+
+
+
+
