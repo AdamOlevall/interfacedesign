@@ -15,16 +15,19 @@ body {
 	/* height:300px; */
 	position:absolute;
 	overflow:hidden;
-   /*   background: -webkit-linear-gradient(top, hsla(210,70%,80%,1) 0%,hsla(210,50%,100%,1) 100%);
+  /*background: -webkit-linear-gradient(top, hsla(210,70%,80%,1) 0%,hsla(210,50%,100%,1) 100%);
   background: -moz-linear-gradient(top, hsla(210,70%,80%,1) 0%,hsla(210,50%,100%,1) 100%);
   font-size:100%; */
 }
+
+
+
 header{
 
-	text-align: center;
+	text-align: right;
 	position: fixed; 
-	top: 28px;
-	left: 0;
+	top: 0px;
+	right: 10px;
 	height: 50px;
 	width: 100%;   
 	padding: 10px;
@@ -34,7 +37,7 @@ header{
 #content {
       background: rgba(255, 255, 255, 0.3);
       position: relative;
-      top: 7%;
+      top: 10%;
       left: 7%;
       width: 85%;
       right: 7%;
@@ -60,10 +63,12 @@ header{
 
 
 #canvas{
+
     display:block;
-    width:50%;
+    margin-left: 2%;
+    width:0%;
     padding:50px 10%;
-    height:300px;
+    height:50%;
 } 
 
 /*div#canvas {
@@ -179,7 +184,7 @@ top: 17px;
   margin-right: 20%;
   margin-left: 0%;
   margin-bottom: 5%;
-  margin-top: 5%;
+  margin-top: 0%;
   text-shadow: 1px 1px 3px #666666;
   -webkit-box-shadow: 0px 1px 3px #666666;
   -moz-box-shadow: 0px 1px 3px #666666;
@@ -199,4 +204,20 @@ top: 17px;
   background-image: -o-linear-gradient(top, #ebf7ff, #ffffff);
   background-image: linear-gradient(to bottom, #ebf7ff, #ffffff);
   text-decoration: none;
+}
+
+#birds{
+     position: absolute;
+}
+
+.redbird {
+   position: absolute;
+    left: 90%;
+    top:80%;
+}
+
+.bluebird {
+   position: absolute;
+    left: 80%;
+    top:80%;
 }

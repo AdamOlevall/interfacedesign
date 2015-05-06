@@ -1,0 +1,82 @@
+div {
+ 
+  box-sizing: border-box;
+ 
+}
+
+
+
+@-webkit-keyframes spin {
+  from {
+    transform:rotateY(0deg);
+  }
+
+  to {
+     transform:rotateY(-360deg);
+  }
+}
+
+@-webkit-keyframes tailblade {
+  from {
+    transform:rotate3d(0,0,1,0deg);
+  }
+
+  to {
+     transform:rotate3d(0,0,1,-360deg);
+  }
+}
+@-webkit-keyframes float {
+  from {
+    transform:translateY(8px) rotate3d(0,0,1,3deg);
+  }
+
+  to {
+     transform:translateY(-8px) rotate3d(0,0,1,0deg);
+  }
+}
+
+
+.helicopter_wrapper{
+  transform: scale(2);
+  position:absolute;
+  top:30%;
+  left:70%;
+
+}
+
+.helicopter {
+  position:relative;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: float;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+
+
+
+.blade {
+  position:absolute;
+  top:0px;
+  left:31px;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-name: spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-play-state: running;
+}
+.tailblade{
+  width:3px;
+  height:7px;
+  background-color: red;
+  position:absolute;
+  top:9px;
+  left:10px;
+  -webkit-transform-origin:50% 100%;
+  -webkit-animation-duration: .1s;
+  -webkit-animation-name: tailblade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-play-state: running;
+}

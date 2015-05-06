@@ -5,6 +5,7 @@ div {
 }
 
 .mike {
+  visibility: visible;
   position: fixed;
   left: 15%;
   top: 60%;
