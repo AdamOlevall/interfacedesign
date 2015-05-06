@@ -3,35 +3,58 @@
       <meta charset="utf-8"/>
 <link rel="stylesheet" href="if.css">
 <link id="css" rel="stylesheet" href="groda.css">
-<link id="css" rel="stylesheet" href="bird.css">
+<link id="css" rel="stylesheet" href="greybird.css">
+<link id="css" rel="stylesheet" href="helicopter.css">
+<link id="css" rel="stylesheet" href="blackbird.css">
 <script type="text/javascript" src="if.js"></script>
   <audio id="frog" src="frog.mp3" preload="auto"></audio>
      <audio id="lose" src="lose.mp3" preload="auto"></audio>
       <audio id="mario" src="mario.mp3" preload="auto"></audio>
 
 
+
 </head>
 
 <body id="body" onload="draw(randomNumber)">
       <embed src="Bofink.mp3" autostart="true" loop="true" width="2" height="0"></embed>
-   <!--  <header id="header">
-           <div class="title"><p> If the cloud is blue, click at the blue botton else click at the white button </p></div> 
-      </header> -->
+        <div class="pajaro" onclick="cloudColorBlue(randomNumber)">..</div>
+   <header id="header">
+            <img onclick="changeLanguage()" id="flag" src="eng.png" height="85%" width="5%">
+            <img onclick="changeLanguage()" id="flag" src="swe.png" height="85%" width="5%">
+           
+      </header> 
   
 <div id="content"> 
       <div id="title">
-         <p id="txt" align="center">If the cloud is blue, click at the blue botton else click at the white button</p></div>  
+         <p id="txt" align="center">If the cloud is blue, click at the blue bird else click at the red bird</p></div>  
       <div id="canvas">
-            <canvas id="myCanvas" width="500" height="180" > </canvas>  
+            <canvas id="myCanvas" width="500" height="180" > </canvas> 
       </div> 
-      <div id="bird">
-            <img src="http://s15.postimage.org/kozhy0eon/pajaro.gif" id="pajaro" class="piopio">
+
+<div class="helicopter_wrapper" onclick="cloudColorWhite(randomNumber)">
+  <div class="helicopter">
+
+    <img class="helicopter_body" src="http://aptary.com/images/codepen/helicopter/bladeless_helicopter.png" alt="Helicopter with no blades">
+    <img class="blade" src="http://aptary.com/images/codepen/helicopter/rotary_blade.png" alt="Helicopter Blades">
+    <div class="tailblade"></div>
+  </div>
+</div>
+
+   <!-- <div ID="myDiv" height:"250" width:"250" filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src="flygplan.png",sizingMethod='scale');></DIV> -->
+     <div id="bird">
+            <img src="http://s15.postimage.org/kozhy0eon/pajaro.gif" id="pajaro" class="piopio" >
       </div>
-      <div id="buttons"> 
+
+       <div class="birds">
+         <img class= "redbird" src="redbird.png" height="13%" width="8%" ></img>
+         <img class= "bluebird" src="bluebird.png" height="13%" width="8%" ></img>
+
+  <!--   <div id="buttons"> 
             <button class="btn" onclick="cloudColorBlue(randomNumber)">Blue Cloud</button>
-            <button class="btn1" onclick="cloudColorWhite(randomNumber)">White Cloud</button>
+            <button class="btn1" onclick="cloudColorWhite(randomNumber)">White Cloud</button> -->
       </div>
-      <div class="mike">
+   <ul id="drag-elements">
+<div class="mike" draggable="true">
             <div class="head">
                   <div class="eyes">
                         <div class="eye">
@@ -59,12 +82,13 @@
                   </div>
                   <div class = "foot">
                   </div>
-            </div>
-      </div></li>
-<div class="bubble">
+               </div>
+            </div></ul>
+      </div>
+<!--<div class="bubble">
 <p>Need help?<br>
 Click on me!</p>
-</div>
+</div> -->
 </div>
 
 
