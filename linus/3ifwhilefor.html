@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-
+<title>Code With Froggy</title>
     <link id="css "href="3ifwhilefor.css" rel="stylesheet">
     <link id="css" href="groda.css" rel="stylesheet">
 
@@ -48,6 +48,13 @@
 			<button id="B1"class="button1" onclick="help();">Help</button>
 
    			<button id="B2"class="button1" onclick="location.href = '../tilda/start.html';">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+  		</div>
+
+  		<!-- helpmessage-->
+  		<div id="helpMessage" style="display:none;">
+  			<p>Move the tiles from the left square to the right square, the picture should show Froggys friend Iggy</p>
+  			<button id="B1"class="buttonHelp" onclick="location.href = '3ifwhilefor.html';">Ok. Got it!</button>
+
   		</div>
 
 		<div id ="mainen" class="container">
@@ -169,6 +176,8 @@
 
 
  -->
+ <img id="theFrog"src="frog.png" style="display:none;">
+
  <p><a id="clicks"></a></p>
 </body>
 </html>
