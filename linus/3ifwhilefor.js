@@ -68,16 +68,6 @@ function canvasDrawWin(){
     ctx.stroke();
 }
 
-
-
-
-
-
-
-
-
-
-
 var clicks = 0;
 
 function allowDrop(ev) {
