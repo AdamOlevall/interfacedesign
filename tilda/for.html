@@ -14,18 +14,18 @@
 
 	</head>
 
-	<body>
+	<body onload="help()">
 
 		
 		<div class="wrapper">
 			<div id="header"></div>
+
 			<div id="content">
 				<div id="txt">
 					Froggy feels lonely. Pick some flowers to cheer him up! <br> Froggys basket is empty. As long as the amout of flowers in the basket is less then 10, keep picking flowers. 
 				</div>
 
 			<div id="gameDiv">
-			<!--	<div id="flowerDiv"> -->
 				<canvas id="canvas"></canvas> 
 				<script src="javascript/game.js"></script>
 				<br>
@@ -34,12 +34,14 @@
 			</div>
 		
 
-			<div id="canvasDiv">
-				<canvas id="canvasHeart"> </canvas> 
 			<!--	<canvas id="canvasSpeech"> </canvas> -->
+			<div id="canvasDiv">
+			<!--	<canvas id="canvasHeart"></canvas> -->
+						<canvas id="tutorial"></canvas>
+						
 
 	      
-			        <div class="mike">
+			        <div class="mike" onclick="tutorial()">
 		  				<div class="head2">
 		    		
 		    				<div class="eyes2">
@@ -64,9 +66,10 @@
 						<div class = "foot2"></div>
 					</div> 
 					</div> 
+
 				</div>
 	<!--<div id="btnDiv"> -->
-			
+
 			
 			
 			</div>

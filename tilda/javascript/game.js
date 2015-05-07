@@ -173,20 +173,35 @@ main();
 
 
 function done() {
-	if(flowersCollected == 0) {
-		console.log("you win!");
+	var canvas = document.getElementById("tutorial");
+  	var ctx = canvas.getContext('2d');
+  	canvas.width  = $(window).width() * 0.7; 
+  	canvas.height = $(window).width() *0.33;
+  	 ctx.clearRect(0,0,canvas.width,canvas.height);
 
-		heart(0,0);
+
+	if(flowersCollected == 10) {
+	console.log("you won!");
+
+  	var winBubble = new Image();    
+  	winBubble.onload = function() {
+    ctx.drawImage(winBubble, 0, 40);
+  	};
+  	winBubble.src = "images/winBubble.png";
+  	flowersCollected = 0;
+
+  	
 
 	}
 	else {
-		ctx.clearRect(0,0, 512, 480);
-		flowersCollected = 0;
-		var canvasHeart = document.getElementById("canvasHeart");
-		var c = canvas.getContext("2d");
-
-		c.clearRect(0,0, 300, 50);
-			}
-
-
+		var againBubble = new Image();    
+  		againBubble.onload = function() {
+    	ctx.drawImage(againBubble, 0, 40);
+  		};
+  		againBubble.src = "images/againBubble.png";
+  		flowersCollected = 0;
+	}
 }
+
+
+
