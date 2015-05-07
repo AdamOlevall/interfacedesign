@@ -21,7 +21,40 @@
 	display: inline-block;
 }
 
-#flag {
+
+#red {
+	position: relative;
+	left: 10%;
+	display: inline-block;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	margin-right: -1%;
+	cursor: pointer;
+	width: 5%;
+}
+
+#green {
+	position: relative;
+	left: 10%;
+	display: inline-block;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	margin-right: -1%;
+	cursor: pointer;
+	width: 5%;
+}
+
+#swedish {
+	position: relative;
+	left: 82%;
+	display: inline-block;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	margin-right: -1%;
+	cursor: pointer;
+	width: 5%;
+}
+#english {
 	position: relative;
 	left: 82%;
 	display: inline-block;

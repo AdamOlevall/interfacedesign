@@ -18,3 +18,10 @@ function draw() {
   }
 }
 
+function changeThemeRed() {
+
+}
+
+function changeThemeGreen() {
+
+}
