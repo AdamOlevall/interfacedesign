@@ -28,6 +28,7 @@ function secondPassed() {
 
 
 function startGame(){
+
     $('#startMessage').hide();
     var countdownTimer = setInterval('secondPassed()', 1000);
 }
@@ -60,8 +61,8 @@ function canvasDrawLoose(){
 }
 
 function canvasDrawWin(){
-    var c = document.getElementById("canvasWin");
-    var ctx = c.getContext("2d");
+    var can = document.getElementById("canvasWin");
+    var ctx = can.getContext("2d");
     ctx.beginPath();
     ctx.arc(95,50,40,0,2*Math.PI);
     ctx.stroke();
@@ -108,9 +109,9 @@ function drop(ev) {
 function checkWin(){
     if (clicks==9){
         seconds = 0;
+        $('#mainen').hide(); 
         $('#canvasWin').show();
         $('#successMessage').show();
-        $('#mainen').hide();
         $('#header').hide();
 
     }

@@ -21,33 +21,33 @@
 	<canvas id="canvasHelp" style="display:none"></canvas>
 	
 
-
+	<!--
 	<div id="header">
 				<img onclick="changeLanguage()" id="flag" src="eng.png">
 				<img onclick="changeLanguage()" id="flag" src="swe.png">
 	</div>
-
+	-->
 
 		<div id="successMessage" style="display:none;">
     		<h2>You did it!</h2>
    			<button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
-   			<button id="B2"class="button" onclick="location.href = 'start.html':">Back</button>   <!-- HÄR SKA TILL STARTSIDA-->
+   			<button id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button>   <!-- HÄR SKA TILL STARTSIDA-->
   		</div>
 
   		<div id="failureMessage" style="display:none;">
   			<h2>You blew it!</h2>
   			<button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
-   			<button id="B2"class="button" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+   			<button id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
   		</div>
 
 		<div id="startMessage">
-  			<h2>If the puzzle is not solved, and while there is time, help Froggy solve it.</h2>
-  			<button id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();">Start</button>
+  			<p>If the puzzle is not solved, and while there is time, help Froggy solve it.</p>
+  			<button id="B1"class="button1" onclick="startGame();canvasDrawWin();canvasDrawLoose();">Start</button>
 
   			<!-- HÄR SKA DE VA HJÄLP-->
 			<button id="B1"class="button1" onclick="help();">Help</button>
 
-   			<button id="B2"class="button1" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+   			<button id="B2"class="button1" onclick="location.href = '../tilda/start.html';">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
   		</div>
 
 		<div id ="mainen" class="container">
