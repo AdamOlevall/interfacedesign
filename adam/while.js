@@ -28,22 +28,32 @@ function play_single_sound4() {
 var x =  Math.floor((Math.random() * 6) + 1);
 var y = x+1;
 var z = x-2;
+var w = x-1;
 
     console.log(x);     
     console.log(y);  
-        console.log(z);  
-
+        console.log(z);     
+    
+document.getElementById("dropCount").innerHTML = 0;
 function mainFunction2(){
-     
+     if ((document.getElementById("dropCount").innerHTML<z) ||(document.getElementById("dropCount").innerHTML==0 )){
     drawBall();
     drawBall2();
     drawBall3();
+    drawBall4();
     drawBall5();
     drawBall6();
     drawBall7();
-
-   if ((document.getElementById("dropCount").innerHTML > z) && (document.getElementById("dropCount").innerHTML >= 0)){
-        drawBall4();
+    }
+ 
+else if ((document.getElementById("dropCount").innerHTML > z) && (document.getElementById("dropCount").innerHTML >= 0)){
+        drawBall8();
+        drawBall9();
+        drawBall10();
+        drawBall11();
+        drawBall12();
+        drawBall13();
+        drawBall14();
     }
 
 
@@ -71,7 +81,7 @@ ball = {
     y: 50,
     
     radius: 40,
-    color: "#D037C3",
+    color: "#85FF70",
     
     // Velocity components
     vx: 0,
@@ -144,7 +154,7 @@ ball = {
     y: 50,
     
     radius: 40,
-    color: "#8D2DE1",
+    color: "#55DC3D",
     
     vx: 0,
     vy: 1,
@@ -217,7 +227,7 @@ ball = {
     y: 50,
     
     radius: 40,
-    color: "#40E2EB",
+    color: "#54DA3D",
     
     // Velocity components
     vx: 0,
@@ -288,7 +298,7 @@ ball = {
     y: 50,
     
     radius: 40,
-    color: "#5CFA07",
+    color: "#4ABC35",
     
     // Velocity components
     vx: 0,
@@ -359,7 +369,7 @@ ball = {
     y: 50,
     
     radius: 40,
-    color: "#FF7C00",
+    color: "#2A881A",
     
     // Velocity components
     vx: 0,
@@ -430,7 +440,7 @@ ball = {
     y: 50,
     
     radius: 40,
-    color: "#FFEB00",
+    color: "#176B08",
     
     // Velocity components
     vx: 0,
@@ -501,7 +511,7 @@ ball = {
     y: 50,
     
     radius: 40,
-    color: "#FA1707",
+    color: "#114E06",
     
     // Velocity components
     vx: 0,
@@ -549,43 +559,495 @@ setInterval(update, 1000/60);
 } 
 
 
-     
-} 
 
-   /*  
-function drawBall(){
+  function drawBall8(){
 
 var canvas = document.getElementById('circle');
-   var ctx = canvas.getContext("2d");
-            ctx.beginPath();
-            ctx.arc(100, 100, 50, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'red';
-            ctx.fill();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = '#FF3333';
-            ctx.stroke();
+     var   ctx = canvas.getContext("2d");
+
+var W = 200,
+ H = 250;
+
+
+canvas.height = H; canvas.width = W;
+
+
+
+var ball = {},
+        gravity = 0.1,
+        bounceFactor = 0.98;
+
+
+ball = {
+    x: W/2,
+    y: 50,
+    
+    radius: 40,
+    color: "#114E06",
+    
+    // Velocity components
+    vx: 0,
+    vy: 1,
+    
+    draw: function() {
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+};
+
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, W, H);
 }
 
-   function drawBall2(){
 
-var canvas = document.getElementById('circle');
-   var ctx = canvas.getContext("2d");
-ctx.beginPath();
-            ctx.arc(50, 50, 30, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'lightGreen';
-            ctx.fill();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = '#FF3333';
-            ctx.stroke();
+function update() {
+    clearCanvas();
+    ball.draw();
+    
+    // Now, lets make the ball move by adding the velocity vectors to its position
+    ball.y += ball.vy;
+    
+    // Lets add some acceleration
+    ball.vy += gravity;
+    //Perfect! Now, lets make it rebound when it touches the floor
+    if(ball.y + ball.radius > H) {
+        // First, reposition the ball on top of the floor and then bounce it!
+        ball.y = H - ball.radius;
+        ball.vy *= -bounceFactor;
+        
+}
+}
 
-            ctx.beginPath();
-            ctx.arc(100, 100, 50, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'green';
-            ctx.fill();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = '#FF3333';
-            ctx.stroke();
-}*/
+
+setInterval(update, 1000/60);
+
+
+
+} 
+
+  function drawBall9(){
+
+var canvas = document.getElementById('circle2');
+     var   ctx = canvas.getContext("2d");
+
+var W = 200,
+ H = 250;
+
+
+canvas.height = H; canvas.width = W;
+
+
+
+var ball = {},
+        gravity = 0.1,
+        bounceFactor = 0.98;
+
+
+ball = {
+    x: W/2,
+    y: 50,
+    
+    radius: 40,
+    color: "#176B08",
+    
+    // Velocity components
+    vx: 0,
+    vy: 1,
+    
+    draw: function() {
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+};
+
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, W, H);
+}
+
+
+function update() {
+    clearCanvas();
+    ball.draw();
+    
+    // Now, lets make the ball move by adding the velocity vectors to its position
+    ball.y += ball.vy;
+    
+    // Lets add some acceleration
+    ball.vy += gravity;
+    //Perfect! Now, lets make it rebound when it touches the floor
+    if(ball.y + ball.radius > H) {
+        // First, reposition the ball on top of the floor and then bounce it!
+        ball.y = H - ball.radius;
+        ball.vy *= -bounceFactor;
+        
+}
+}
+
+
+setInterval(update, 1000/60);
+
+
+
+} 
+
+  function drawBall10(){
+
+var canvas = document.getElementById('circle3');
+     var   ctx = canvas.getContext("2d");
+
+var W = 200,
+ H = 250;
+
+
+canvas.height = H; canvas.width = W;
+
+
+
+var ball = {},
+        gravity = 0.1,
+        bounceFactor = 0.98;
+
+
+ball = {
+    x: W/2,
+    y: 50,
+    
+    radius: 40,
+    color: "#2A881A",
+    
+    // Velocity components
+    vx: 0,
+    vy: 1,
+    
+    draw: function() {
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+};
+
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, W, H);
+}
+
+
+function update() {
+    clearCanvas();
+    ball.draw();
+    
+    // Now, lets make the ball move by adding the velocity vectors to its position
+    ball.y += ball.vy;
+    
+    // Lets add some acceleration
+    ball.vy += gravity;
+    //Perfect! Now, lets make it rebound when it touches the floor
+    if(ball.y + ball.radius > H) {
+        // First, reposition the ball on top of the floor and then bounce it!
+        ball.y = H - ball.radius;
+        ball.vy *= -bounceFactor;
+        
+}
+}
+
+
+setInterval(update, 1000/60);
+
+
+
+} 
+       function drawBall11(){
+
+var canvas = document.getElementById('circle4');
+     var   ctx = canvas.getContext("2d");
+
+var W = 200,
+ H = 250;
+
+
+canvas.height = H; canvas.width = W;
+
+
+
+var ball = {},
+        gravity = 0.1,
+        bounceFactor = 0.98;
+
+
+ball = {
+    x: W/2,
+    y: 50,
+    
+    radius: 40,
+    color: "#4ABC35",
+    
+    // Velocity components
+    vx: 0,
+    vy: 1,
+    
+    draw: function() {
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+};
+
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, W, H);
+}
+
+
+function update() {
+    clearCanvas();
+    ball.draw();
+    
+    // Now, lets make the ball move by adding the velocity vectors to its position
+    ball.y += ball.vy;
+    
+    // Lets add some acceleration
+    ball.vy += gravity;
+    //Perfect! Now, lets make it rebound when it touches the floor
+    if(ball.y + ball.radius > H) {
+        // First, reposition the ball on top of the floor and then bounce it!
+        ball.y = H - ball.radius;
+        ball.vy *= -bounceFactor;
+        
+}
+}
+
+
+setInterval(update, 1000/60);
+
+
+
+} 
+
+  function drawBall12(){
+
+var canvas = document.getElementById('circle5');
+     var   ctx = canvas.getContext("2d");
+
+var W = 200,
+ H = 250;
+
+
+canvas.height = H; canvas.width = W;
+
+
+
+var ball = {},
+        gravity = 0.1,
+        bounceFactor = 0.98;
+
+
+ball = {
+    x: W/2,
+    y: 50,
+    
+    radius: 40,
+    color: "#54DA3D",
+    
+    // Velocity components
+    vx: 0,
+    vy: 1,
+    
+    draw: function() {
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+};
+
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, W, H);
+}
+
+
+function update() {
+    clearCanvas();
+    ball.draw();
+    
+    // Now, lets make the ball move by adding the velocity vectors to its position
+    ball.y += ball.vy;
+    
+    // Lets add some acceleration
+    ball.vy += gravity;
+    //Perfect! Now, lets make it rebound when it touches the floor
+    if(ball.y + ball.radius > H) {
+        // First, reposition the ball on top of the floor and then bounce it!
+        ball.y = H - ball.radius;
+        ball.vy *= -bounceFactor;
+        
+}
+}
+
+
+setInterval(update, 1000/60);
+
+
+
+} 
+  function drawBall13(){
+
+var canvas = document.getElementById('circle6');
+     var   ctx = canvas.getContext("2d");
+
+var W = 200,
+ H = 250;
+
+
+canvas.height = H; canvas.width = W;
+
+
+
+var ball = {},
+        gravity = 0.1,
+        bounceFactor = 0.98;
+
+
+ball = {
+    x: W/2,
+    y: 50,
+    
+    radius: 40,
+    color: "#55DC3D",
+    
+    // Velocity components
+    vx: 0,
+    vy: 1,
+    
+    draw: function() {
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+};
+
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, W, H);
+}
+
+
+function update() {
+    clearCanvas();
+    ball.draw();
+    
+    // Now, lets make the ball move by adding the velocity vectors to its position
+    ball.y += ball.vy;
+    
+    // Lets add some acceleration
+    ball.vy += gravity;
+    //Perfect! Now, lets make it rebound when it touches the floor
+    if(ball.y + ball.radius > H) {
+        // First, reposition the ball on top of the floor and then bounce it!
+        ball.y = H - ball.radius;
+        ball.vy *= -bounceFactor;
+        
+}
+}
+
+
+setInterval(update, 1000/60);
+
+
+
+} 
+  function drawBall14(){
+
+var canvas = document.getElementById('circle7');
+     var   ctx = canvas.getContext("2d");
+
+var W = 200,
+ H = 250;
+
+
+canvas.height = H; canvas.width = W;
+
+
+
+var ball = {},
+        gravity = 0.1,
+        bounceFactor = 0.98;
+
+
+ball = {
+    x: W/2,
+    y: 50,
+    
+    radius: 40,
+    color: "#85FF70",
+    
+    // Velocity components
+    vx: 0,
+    vy: 1,
+    
+    draw: function() {
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+};
+
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, W, H);
+}
+
+
+function update() {
+    clearCanvas();
+    ball.draw();
+    
+    // Now, lets make the ball move by adding the velocity vectors to its position
+    ball.y += ball.vy;
+    
+    // Lets add some acceleration
+    ball.vy += gravity;
+    //Perfect! Now, lets make it rebound when it touches the floor
+    if(ball.y + ball.radius > H) {
+        // First, reposition the ball on top of the floor and then bounce it!
+        ball.y = H - ball.radius;
+        ball.vy *= -bounceFactor;
+        
+}
+}
+
+
+setInterval(update, 1000/60);
+
+
+
+} 
+} 
+
 
 
 window.onload = function() {
@@ -720,8 +1182,7 @@ window.onload = function() {
         //elementDragged = null;
         mainFunction2();
         if (elementDropped >x){
-            alert("You lost");
-              location.reload();
+            minFunk();
         }
         return false;
     });
@@ -749,13 +1210,11 @@ window.onload = function() {
          }
 
 
-        if (elementDropped <x){
-            alert("You lost");
-              location.reload();
+        if (elementDropped <y){
+            minFunk();
         }
          else{
-            alert("You win");
-              location.reload();
+            minFunk2();
         }
         return false;
     });
@@ -767,3 +1226,47 @@ window.onload = function() {
     
 };
 
+ var canvas = document.getElementById("e");
+        var canvas2 = document.getElementById("f");
+        
+
+      
+        var context = canvas.getContext("2d");
+  
+        var context2 = canvas2.getContext("2d");
+        
+        var tree = new Image();
+      var cactus= new Image();
+
+        cactus.src="cactus.png";
+        tree.src = "tree.png";
+               tree.onload = function() {
+        context.drawImage(tree, 0, 0, 300,100);
+  
+  };
+       cactus.onload = function() {
+        context2.drawImage(cactus, 0, 0, 300,100);
+       
+    
+  };
+
+
+  function minFunk() {
+    var $p = $('#heej');
+    $p.css('visibility', 'visible');
+}
+
+function minFunk2() {
+    var $p = $('#heej2');
+    $p.css('visibility', 'visible');
+}
+
+
+$("#heej").click(function(){
+   location.reload();
+});
+
+
+$("#heej2").click(function(){
+  document.location.href = 'while.html';
+});
