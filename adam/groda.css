@@ -10,7 +10,8 @@ div {
   padding-top: 2%;
   transition: all 1s;
   margin-top: 20px;
-
+position: relative;
+z-index: 10;
 }
 
 .mike:hover {
