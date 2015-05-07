@@ -1268,5 +1268,5 @@ $("#heej").click(function(){
 
 
 $("#heej2").click(function(){
-  document.location.href = 'while.html';
+  document.location.href = '../tilda/start.html';
 });
