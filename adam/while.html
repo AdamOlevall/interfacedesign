@@ -11,22 +11,22 @@
     <link rel="stylesheet" href="reset.css">
     <link href="while.css" rel="stylesheet">
     <link href="groda.css" rel="stylesheet">
-    <script  src="while.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
+    
 
 
 </head>
-<body onload="play_single_sound4()">
+<body >
 
 
 
 <div class="wrapper">
     <div class="container">
                <div id="txtDiv">
-          <p id="txt" data-i18n="text.txt"> Let's learn how to code!</p>
-          <p id="txt">While there are not any green balls bouncing, put Froggy in the woods. Otherwise, put him in the dessert</p>
+          <p id="txt" data-i18n="text.txt">Let's try something little more advanced!</p>
+          <p id="txt">While the brightest ball is placed to the left, put Froggy in the woods. Otherwise, put him in the dessert</p>
         </div>
+        <p id="heej">Oh no you lost, click me to try again</p>
+      <p id="heej2">Yey you completed the While game, click me to try another game</p>
         <div id="dd-elements" class="clearfix">
             <ul id="drag-elements">
                 <li draggable="true"><div class="mike">
@@ -100,6 +100,7 @@
 <div class = "foot2"></div>
 </div>
 </div></li>
+
                 <li draggable="true"> <div class="mike">
   <div class="head">
     <div class="eyes">
@@ -189,65 +190,15 @@
         <canvas id="circle7"></canvas>
         </div>
         </div>
-          <h4>drop:      <span id="dropCount"></span></h4>
+          <h4>      <span id="dropCount"></span></h4>
+
+
         </div>
         
-       
-
-
-        
-
-        
-
-        
-
-  
-
-
-
-
-  <script>
-
-         var canvas = document.getElementById("e");
-        var canvas2 = document.getElementById("f");
-        
-
-        // Checking that the Canvas is instantiated properly before we try to use it.
-        //
-      
-
-            // Painting is done in the 2d context, so we check for that as well, before we use it.
-            //
-            
-            
-
-       
-        var context = canvas.getContext("2d");
-  
-        var context2 = canvas2.getContext("2d");
-        
-        var tree = new Image();
-      var cactus= new Image();
-
-        cactus.src="cactus.png";
-        tree.src = "tree.png";
-               tree.onload = function() {
-        context.drawImage(tree, 0, 0, 300,100);
-  
-  };
-       cactus.onload = function() {
-        context2.drawImage(cactus, 0, 0, 300,100);
-       
-    
-  };
-
-
-
-  </script>
-  
-
-
-<p id="demo"></p>
 
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script  src="while.js"></script>
+    
+
 </html>

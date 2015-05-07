@@ -8,8 +8,9 @@ div {
   width: 100px;
   margin: 0 auto;
   transition: all 1s;
-  margin-top: 40%;
-  margin-left: 10%;
+ /* margin-top: 40%;*/
+ 
+  margin-left: 1%;
   
 
 }

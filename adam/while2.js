@@ -1,3 +1,6 @@
+
+
+
 var clicks = 0;
 var x =  Math.floor((Math.random() * 9) + 1);
 var y = x-1;
@@ -8,23 +11,36 @@ function myCounter(){
     document.getElementById("clicks").innerHTML = clicks;
     mainFunction();
    if (clicks > x){
-    alert("You lost!!");
- location.reload();
+    minFunk();
 }
 
 }
 
-console.log(x);
+function play_single_sound() {
+        document.getElementById('frog').play();
+}
+
+function play_single_sound2() {
+        document.getElementById('lose').play();
+}
+
+function play_single_sound3() {
+        document.getElementById('mario').play();
+}
+
+function play_single_sound4() {
+        document.getElementById('synth').play();
+} 
 
 function myFinish(){
 
 if(clicks > y){
-    alert("You won!!");
-        window.location.href="while.html";
+    minFunk2();
+    play_single_sound3();
 }
 else {
-    alert("You lost!!");
- location.reload();
+   minFunk();
+   play_single_sound2();
 }
 }
 
@@ -91,3 +107,25 @@ function mainFunction() {
     }
 
 }
+
+
+function minFunk() {
+    var $p = $('#heej');
+    $p.css('visibility', 'visible');
+}
+
+function minFunk2() {
+    var $p = $('#heej2');
+    $p.css('visibility', 'visible');
+}
+
+
+$("#heej").click(function(){
+   location.reload();
+});
+
+
+$("#heej2").click(function(){
+  document.location.href = 'while.html';
+});
+

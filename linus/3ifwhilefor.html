@@ -9,32 +9,135 @@
     <script type="text/javascript" src="3ifwhilefor.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="i18next-1.7.7.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 
 
 </head>
 <body>
-	<div class="wrapper">
+	<div  class="wrapper">
+	<canvas id="canvasWin" style="display:none"></canvas>
+	<canvas id="canvasLoose" style="display:none"></canvas>
+	<canvas id="canvasHelp" style="display:none"></canvas>
+	
+
+
 	<div id="header">
 				<img onclick="changeLanguage()" id="flag" src="eng.png">
 				<img onclick="changeLanguage()" id="flag" src="swe.png">
-			</div>
-		<div class="container">
-		
+	</div>
 
+
+		<div id="successMessage" style="display:none;">
+    		<h2>You did it!</h2>
+   			<button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
+   			<button id="B2"class="button" onclick="location.href = 'start.html':">Back</button>   <!-- HÄR SKA TILL STARTSIDA-->
+  		</div>
+
+  		<div id="failureMessage" style="display:none;">
+  			<h2>You blew it!</h2>
+  			<button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
+   			<button id="B2"class="button" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+  		</div>
+
+		<div id="startMessage">
+  			<h2>If the puzzle is not solved, and while there is time, help Froggy solve it.</h2>
+  			<button id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();">Start</button>
+
+  			<!-- HÄR SKA DE VA HJÄLP-->
+			<button id="B1"class="button1" onclick="help();">Help</button>
+
+   			<button id="B2"class="button1" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+  		</div>
+
+		<div id ="mainen" class="container">
+		
+<!--
 		<div id="txtDiv">
-					<p id="txt" data-i18n="text.txt"> While the bouncing ball is rolling and if the squares are greens, flipp the squares</p>
+					
+					<p id="txt" data-i18n="text.txt">If the cards still are unsorted and While there is time left on the clock, sort the cards in the right box</p>
 					
 		</div>
+-->
+		<div id="countdown" class="timer">0:25</div>	
+		
 
-<canvas id ="squareOne">
-	
-</canvas>
+
+
+
+  	
+
+
+
+  		
+
+<div id ="squareOne">
+		<!--
+		<img class="frog" src="frog.png">
+		-->
+		
+		<div id ="dropOne" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+
+		<div id ="dropTwo" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+
+		<div id ="dropThree" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+		
+		<div id ="dropFour" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+		
+		<div id ="dropFive" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+		
+		<div id ="dropSix" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+		
+		<div id ="dropSeven" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+		
+		<div id ="dropEight" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+		
+		<div id ="dropNine" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+</div>
+
+<div id ="squareTwo">
+		
+		<div id ="picOne">
+		<img id="drag1" data-div="dropFour" src="frog4.png" draggable="true" ondragstart="drag(event)">
+		</div>
+
+		<div id="picTwo">
+		<img id="drag2" data-div="dropOne" src="frog1.png" draggable="true" ondragstart="drag(event)">
+		</div>
+
+		<div id="picThree">
+		<img id="drag3" data-div="dropNine" src="frog9.png" draggable="true" ondragstart="drag(event)">
+		</div>
+		
+		<div id="picFour">
+		<img id="drag4" data-div="dropTwo" src="frog2.png" draggable="true" ondragstart="drag(event)">
+		</div>
+		
+		<div id="picFive">
+		<img id="drag5" data-div="dropSeven" src="frog7.png" draggable="true" ondragstart="drag(event)">
+		</div>
+		
+		<div id="picSix">
+		<img id="drag6" data-div="dropThree" src="frog3.png" draggable="true" ondragstart="drag(event)">
+		</div>
+		
+		<div id="picSeven">
+		<img id="drag7" data-div="dropEight" src="frog8.png" draggable="true" ondragstart="drag(event)">
+		</div>
+		
+		<div id="picEight">
+		<img id="drag8" data-div="dropSix" src="frog6.png" draggable="true" ondragstart="drag(event)">
+		</div>
+		
+		<div id="picNine">
+		<img id="drag9" data-div="dropFive" src="frog5.png" draggable="true" ondragstart="drag(event)">
+		</div>
+</div>
 
 		
 	
 		
-
-			
+</div>	
 <!--GRODAN................................			
 			 <div class="mike">
 	  			<div class="head2">
@@ -66,6 +169,7 @@
 
 
  -->
+ <p><a id="clicks"></a></p>
 </body>
 </html>
 
