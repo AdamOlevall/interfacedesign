@@ -4,23 +4,23 @@
 		<meta charset="UTF-8">
 
 
-		<link id="css" rel="stylesheet" href="css/start.css">
+		<link id="css" rel="stylesheet" href="css/start.css" title="white"> 
 		<link id="css" rel="stylesheet" href="css/groda.css">
+		<link id="css" rel="alternate stylesheet" href="css/start2.css" title="black">
 
 		<script src="javascript/start.js"></script>
-		
-
-
 	</head>
-
-
 	<body onload="draw()">
 		<div class="wrapper">
 			<div id="header">
 
-				<img  id = "red" onclick="changeThemeRed()" src="images/redball.png">
-				<img  id = "green" onclick="changeThemeGreen()" src="images/greenball.png">
-
+				<img  id="white" onclick="switch_style('white');return false;" name="theme" value="White Theme"  src="images/white_circle.png">
+				<img  id="black" onclick="switch_style('black');return false;" name="theme" value="Black Theme"  src="images/blackball.png">
+<!--
+<form>
+<input type="submit" onclick="switch_style('white');return false;" name="theme" value="White Theme" id="white">
+<input type="submit" onclick="switch_style('black');return false;" name="theme" value="Black Theme" id="black">
+</form> -->
 				<img  id = "english" onclick="changeLang('en')"  src="images/eng.png">
 				<img  id = "swedish" onclick="changeLang('en')" src="images/swe.png">
 			</div>
