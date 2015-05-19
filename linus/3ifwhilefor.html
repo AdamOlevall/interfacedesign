@@ -44,11 +44,19 @@
   		</div>
 
 		<div id="startMessage">
+
+  			<h2 >If the puzzle is not solved, and while there is time, help Froggy solve it.</h2>
+  			<button  data-i18n="textifwhilefor.txt2" id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();">Start</button>
+
   			<p>If the puzzle is not solved, and while there is time, help Froggy solve the puzzle!</p>
   			<button id="B1"class="button1" onclick="startGame();canvasDrawWin();canvasDrawLoose();">Start</button>
 
+
   			<!-- HÄR SKA DE VA HJÄLP-->
-			<button id="B1"class="button1" onclick="help();">Help</button>
+			<button   data-i18n="textifwhilefor.txt3" id="B1"class="button1" onclick="help();">Help</button>
+
+
+   			<button   data-i18n="textifwhilefor.txt4" id="B2"class="button1" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
 
    			<button id="B2"class="button1" onclick="location.href = '../tilda/start.html';">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
   		</div>
@@ -57,6 +65,7 @@
   		<div id="helpMessage" style="display:none;">
   			<p>Move the tiles from the left square to the right square, the picture should show Froggys friend Iggy</p>
   			<button id="B1"class="buttonHelp" onclick="location.href = '3ifwhilefor.html';">Ok. Got it!</button>
+
 
   		</div>
 
@@ -171,5 +180,8 @@
 
 
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script  src="../tilda/translate2.js"></script>
+	<script  src="../tilda/i18next.js"></script>
 </html>
 

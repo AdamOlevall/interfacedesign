@@ -14,6 +14,10 @@
 		<div class="wrapper">
 			<div id="header">
 
+				<img  id = "english"   href="#" onclick="setLanguage('en'); location.reload();"  src="images/eng.png">
+				<img  id = "swedish" href="#" onclick="setLanguage('sv'); location.reload();" src="images/swe.png">
+
+
 				<img  id="white" onclick="switch_style('white');return false;" name="theme" value="White Theme"  src="images/white_circle.png">
 				<img  id="black" onclick="switch_style('black');return false;" name="theme" value="Black Theme"  src="images/blackball.png">
 <!--
@@ -23,6 +27,7 @@
 </form> -->
 				<img  id = "english" onclick="changeLang('en')"  src="images/eng.png">
 				<img  id = "swedish" onclick="changeLang('en')" src="images/swe.png">
+
 			</div>
 
 			<div id="content">	
@@ -31,25 +36,25 @@
 					<img id="title" src="images/logo.png"></img>
 				</div>
 				<div id="txtDiv">
-					<p id="txt" data-i18n="text.txt"> Let's learn how to code!</p>
-					<p id="txt">Click on one of the stumps to play with me.</p>
+					<p id="txt" data-i18n="textstart.txt"> Let's learn how to code!</p>
+					<p id="txt2" data-i18n="textstart.txt2">Click on one of the stumps to play with me.</p>
 				</div>
 
 				<div id="buttonDiv">
 
-						<img class="stump" src="images/stump.png" data-i18n="btn.if" onclick="location.href = '../stina/if.html';" id="if">
-							<p id="stumptxtIF">IF</p>
+						<img class="stump" src="images/stump.png"  onclick="location.href = '../stina/if.html';" id="if">
+							<p data-i18n="textstart.txt3"  id="stumptxtIF">IF</p>
 						</img>
 
-						<img class="stump" src="images/stump.png" data-i18n="btn.if" onclick="location.href = '../adam/while2.html';" id="while">
-							<p id="stumptxtWHILE">WHILE</p>
+						<img class="stump" src="images/stump.png"  onclick="location.href = '../adam/while2.html';" id="while">
+							<p data-i18n="textstart.txt4" id="stumptxtWHILE">WHILE</p>
 						</img>
-						<img class="stump" src="images/stump.png" data-i18n="btn.if" onclick="location.href = 'for.html';" id="for">
-							<p id="stumptxtFOR">FOR</p>
+						<img class="stump" src="images/stump.png"  onclick="location.href = 'for.html';" id="for">
+							<p data-i18n="textstart.txt5" id="stumptxtFOR">FOR</p>
 
 						</img>
-						<img class="stump" src="images/stump.png" data-i18n="btn.if" onclick="location.href = '../linus/3ifwhilefor.html';" id="for">
-							<p id="stumptxtALL">ALL</p>
+						<img class="stump" src="images/stump.png" onclick="location.href = '../linus/3ifwhilefor.html';" id="for">
+							<p data-i18n="textstart.txt6"  id="stumptxtALL">ALL</p>
 						</img>
 				</div>
 		        <div class="mike">
@@ -78,12 +83,17 @@
 				<div id="aniDiv">
 					<canvas id="balloon"></canvas>
 					<div id="txtBalloon">
-						<p>Need help?<br>
-					 	Click on me!</p>
+						<p data-i18n="textstart.txt7">Need help?</p>
+					 	<p data-i18n="textstart.txt8">Click on me!</p>
 					</div>
 				</div>
 			
 			</div>
 		</div>
 	</body>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script  src="translate2.js"></script>
+	<script  src="i18next.js"></script>
+	
 </html>
