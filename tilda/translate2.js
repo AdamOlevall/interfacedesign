@@ -96,7 +96,11 @@
 			},
 
 				'textifwhilefor': {
-				'txt': 'Om puzzlet inte är löst och medan det finns tid kvar, hjälp Froggy att lösa',
+
+
+
+				'txt': 'Om puzzlet inte är löst och medan det finns tid kvar, hjälp Froggy att lösa det',
+
 				'txt2': 'Börja',
 				'txt3': 'Hjälp',
 				'txt4': 'Tillbaka'
