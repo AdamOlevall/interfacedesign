@@ -455,8 +455,8 @@
 Sen ska även canvasHelp1 justeras och bilderna ska läggas ihop fint! */
 
 #canvasHelp1{
-	/*border: 6px solid gray;
-	border-radius: 20px;*/
+	border: 6px solid gray;
+	border-radius: 20px;
 	display: block;
 	background-image: url("frog.png");
 	background-position: 0% 0%;
