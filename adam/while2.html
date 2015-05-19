@@ -45,13 +45,13 @@
 
 
 <div id="txtDiv">
-          <p id="txt" data-i18n="text.txt"> Let's start with a very basic example</p>
-          <p id="txt">While the circle is purple, push Quack . When it change color push Mjau</p>
+          <p id="txt" data-i18n="textwhile.txt"> Let's start with a very basic example</p>
+          <p id="txt" data-i18n="textwhile.txt2">While the circle is purple, push Quack . When it change color push Mjau</p>
         </div>
 <p id="heej">Oh no you lost, click me to try again</p>
 <p id="heej2">Yey you made it, click me to go to the next level</p>
 <div class = "knappar">
-	<button class = "btn" onclick="myCounter()"> Quack </button>
+	<button class = "btn" onclick="myCounter()" data-i18n="textwhile.txt7"> Quack </button>
 <button class = "btn2" onclick="myFinish()"> Mjau </button>
 </div>
 <canvas id="circle">
@@ -93,6 +93,7 @@
   
 </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-<script type="text/javascript" src="while2.js"></script>
+  <script type="text/javascript" src="while2.js"></script>
+  <script  src="../tilda/translate2.js"></script>
+  <script  src="../tilda/i18next.js"></script>
 </html>

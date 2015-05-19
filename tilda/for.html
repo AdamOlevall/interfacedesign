@@ -22,14 +22,15 @@
 
 			<div id="content">
 				<div id="txt">
-					Froggy feels lonely. Pick some flowers to cheer him up! <br> Froggys basket is empty. As long as the amout of flowers in the basket is less then 10, keep picking flowers. 
+					<p data-i18n="textfor.txt">Froggy feels lonely. Pick some flowers to cheer him up! </p> 
+					<p data-i18n="textfor.txt2">Froggys basket is empty. As long as the amout of flowers in the basket is less then 10, keep picking flowers. </p>
 				</div>
 
 			<div id="gameDiv">
 				<canvas id="canvas"></canvas> 
 				<script src="javascript/game.js"></script>
 				<br>
-				<button id="button" onclick="done()">Done!</button>
+				<button  data-i18n="textfor.txt3" id="button" onclick="done()">Done!</button>
 
 			</div>
 		
@@ -77,4 +78,8 @@
 
 
 	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script  src="translate2.js"></script>
+  <script  src="i18next.js"></script>
+    
 </html>

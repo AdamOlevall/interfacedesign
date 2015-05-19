@@ -41,13 +41,13 @@
   		</div>
 
 		<div id="startMessage">
-  			<h2>If the puzzle is not solved, and while there is time, help Froggy solve it.</h2>
-  			<button id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();">Start</button>
+  			<h2 >If the puzzle is not solved, and while there is time, help Froggy solve it.</h2>
+  			<button  data-i18n="textifwhilefor.txt2" id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();">Start</button>
 
   			<!-- HÄR SKA DE VA HJÄLP-->
-			<button id="B1"class="button1" onclick="help();">Help</button>
+			<button   data-i18n="textifwhilefor.txt3" id="B1"class="button1" onclick="help();">Help</button>
 
-   			<button id="B2"class="button1" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+   			<button   data-i18n="textifwhilefor.txt4" id="B2"class="button1" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
   		</div>
 
 		<div id ="mainen" class="container">
@@ -171,5 +171,8 @@
  -->
  <p><a id="clicks"></a></p>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script  src="../tilda/translate2.js"></script>
+	<script  src="../tilda/i18next.js"></script>
 </html>
 
