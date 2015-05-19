@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-
+<title>Code With Froggy</title>
     <link id="css "href="3ifwhilefor.css" rel="stylesheet">
     <link id="css" href="groda.css" rel="stylesheet">
 
@@ -18,36 +18,55 @@
 	<div  class="wrapper">
 	<canvas id="canvasWin" style="display:none"></canvas>
 	<canvas id="canvasLoose" style="display:none"></canvas>
+	
 	<canvas id="canvasHelp" style="display:none"></canvas>
 	
+	<canvas id="canvasHelp1" style="display:none"></canvas>
+	
 
-
+	<!--
 	<div id="header">
 				<img onclick="changeLanguage()" id="flag" src="eng.png">
 				<img onclick="changeLanguage()" id="flag" src="swe.png">
 	</div>
-
+	-->
 
 		<div id="successMessage" style="display:none;">
     		<h2>You did it!</h2>
    			<button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
-   			<button id="B2"class="button" onclick="location.href = 'start.html':">Back</button>   <!-- HÄR SKA TILL STARTSIDA-->
+   			<button id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button>   <!-- HÄR SKA TILL STARTSIDA-->
   		</div>
 
   		<div id="failureMessage" style="display:none;">
   			<h2>You blew it!</h2>
   			<button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
-   			<button id="B2"class="button" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+   			<button id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
   		</div>
 
 		<div id="startMessage">
+
   			<h2 >If the puzzle is not solved, and while there is time, help Froggy solve it.</h2>
   			<button  data-i18n="textifwhilefor.txt2" id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();">Start</button>
+
+  			<p>If the puzzle is not solved, and while there is time, help Froggy solve the puzzle!</p>
+  			<button id="B1"class="button1" onclick="startGame();canvasDrawWin();canvasDrawLoose();">Start</button>
+
 
   			<!-- HÄR SKA DE VA HJÄLP-->
 			<button   data-i18n="textifwhilefor.txt3" id="B1"class="button1" onclick="help();">Help</button>
 
+
    			<button   data-i18n="textifwhilefor.txt4" id="B2"class="button1" onclick="location.href = 'start.html':">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+
+   			<button id="B2"class="button1" onclick="location.href = '../tilda/start.html';">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+  		</div>
+
+  		<!-- helpmessage-->
+  		<div id="helpMessage" style="display:none;">
+  			<p>Move the tiles from the left square to the right square, the picture should show Froggys friend Iggy</p>
+  			<button id="B1"class="buttonHelp" onclick="location.href = '3ifwhilefor.html';">Ok. Got it!</button>
+
+
   		</div>
 
 		<div id ="mainen" class="container">
@@ -72,9 +91,7 @@
   		
 
 <div id ="squareOne">
-		<!--
-		<img class="frog" src="frog.png">
-		-->
+		
 		
 		<div id ="dropOne" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
 
@@ -138,38 +155,30 @@
 	
 		
 </div>	
-<!--GRODAN................................			
-			 <div class="mike">
-	  			<div class="head2">
-	    		<div class="eyes2">
-	      		<div class="eye2">
-	        		<div class="pupil2"></div>
-	      		</div>
-	      		<div class="eye2">
-	        		<div class="pupil2"></div>
-	      		</div>
-	    		</div>
-	    		<div class="nose">
-	      			<div class="ball2"></div>
-	      			<div class="ball2"></div>
-	    		</div>
-	    			<div class="mouth2"></div>
-	  			</div>
-	  			<div class="body2">
-	    		<div class= "innerbody2">
-	    		</div>
-	 			<div class = "foot2"></div>
-				<div class = "foot2"></div>
-				</div>
-				</div>
-<canvas id="canvas"></canvas>
-		</div>
 
-	</div>
+ <img id="theFrog"src="frog.png" style="display:none;">
 
-
- -->
  <p><a id="clicks"></a></p>
+
+
+
+<!-- TESTA SPRÅk -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script  src="../tilda/translate2.js"></script>

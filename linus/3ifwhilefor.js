@@ -19,6 +19,7 @@ function secondPassed() {
         
         $('#successMessage').show();
         $('#canvasWin').show();
+        $('#clicks').hide();
         $('#mainen').hide();
         $('#header').hide();
     }else {
@@ -28,54 +29,59 @@ function secondPassed() {
 
 
 function startGame(){
+
     $('#startMessage').hide();
     var countdownTimer = setInterval('secondPassed()', 1000);
 }
 
 
 function help(){
-    canvasDrawHelp();
-    $('#canvasHelp').show();
+   // canvasDrawHelp();
+    canvasDrawHelp1();
+   // $('#canvasHelp').show();
+    $('#canvasHelp1').show();
+    $('#helpMessage').show(); 
     $('#mainen').hide();
     $('#header').hide();
     $('#startMessage').hide();
     //Här ska en ok knapp visas -> back to start
 }
 
+function canvasDrawHelp1(){
+    var c = document.getElementById("canvasHelp1");
+    var ctx = c.getContext("2d");
+  
+}
 
+/*
 function canvasDrawHelp(){
     var c = document.getElementById("canvasHelp");
     var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(95,50,40,0,2*Math.PI);
-    ctx.stroke();
-    }
+  
+
+}
+*/
+
+
+
+
+
 
 function canvasDrawLoose(){
     var c = document.getElementById("canvasLoose");
     var ctx = c.getContext("2d");
     ctx.beginPath();
-    ctx.arc(95,50,40,0,2*Math.PI);
+    ctx.lineWidth="1";
+    ctx.strokeStyle="gray";
+    ctx.rect(20,20,90,120);
     ctx.stroke();
 }
 
 function canvasDrawWin(){
     var c = document.getElementById("canvasWin");
     var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(95,50,40,0,2*Math.PI);
-    ctx.stroke();
+   
 }
-
-
-
-
-
-
-
-
-
-
 
 var clicks = 0;
 
@@ -108,11 +114,11 @@ function drop(ev) {
 function checkWin(){
     if (clicks==9){
         seconds = 0;
+        $('#mainen').hide(); 
         $('#canvasWin').show();
         $('#successMessage').show();
-        $('#mainen').hide();
         $('#header').hide();
-
+        $('#clicks').hide();
     }
 }
 
@@ -125,4 +131,3 @@ function checkWin(){
 
    
 
-  

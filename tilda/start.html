@@ -4,22 +4,30 @@
 		<meta charset="UTF-8">
 
 
-		<link id="css" rel="stylesheet" href="css/start.css">
+		<link id="css" rel="stylesheet" href="css/start.css" title="white"> 
 		<link id="css" rel="stylesheet" href="css/groda.css">
+		<link id="css" rel="alternate stylesheet" href="css/start2.css" title="black">
 
 		<script src="javascript/start.js"></script>
-		
-
-
 	</head>
-
-
 	<body onload="draw()">
 		<div class="wrapper">
 			<div id="header">
-				|
+
 				<img  id = "english"   href="#" onclick="setLanguage('en'); location.reload();"  src="images/eng.png">
 				<img  id = "swedish" href="#" onclick="setLanguage('sv'); location.reload();" src="images/swe.png">
+
+
+				<img  id="white" onclick="switch_style('white');return false;" name="theme" value="White Theme"  src="images/white_circle.png">
+				<img  id="black" onclick="switch_style('black');return false;" name="theme" value="Black Theme"  src="images/blackball.png">
+<!--
+<form>
+<input type="submit" onclick="switch_style('white');return false;" name="theme" value="White Theme" id="white">
+<input type="submit" onclick="switch_style('black');return false;" name="theme" value="Black Theme" id="black">
+</form> -->
+				<img  id = "english" onclick="changeLang('en')"  src="images/eng.png">
+				<img  id = "swedish" onclick="changeLang('en')" src="images/swe.png">
+
 			</div>
 
 			<div id="content">	
