@@ -30,6 +30,7 @@ function draw(randomNumber) {
      var context = canvas.getContext('2d'); 
     // var numb = Math.floor((Math.random() * 10) + 1);
      setInterval(animation, 30);
+<<<<<<< HEAD
   
 ///draw the box
 
@@ -41,11 +42,12 @@ function draw(randomNumber) {
 */
 
 
+=======
+>>>>>>> 585d519882bf9210c0ec1c3b95f4236382e3b0d8
 
       context.rect(0,0,100,100);
       context.fillStyle="rgba(0, 0, 0, 0)";
       context.fill();
-
 
 ///draw the cloud
 
@@ -59,10 +61,10 @@ function draw(randomNumber) {
       context.bezierCurveTo(200, 5, 150, 20, 170, 80);
 
 /// complete custom shape
-var numb = randomNumber;
+      var numb = randomNumber;
       context.lineWidth = 5;
 // choose color for the cloud and fill it
-if (numb < 6) {
+    if (numb < 6) {
     context.fillStyle = '#8ED6FF';
 
   } else {
@@ -71,11 +73,11 @@ if (numb < 6) {
       context.fill();
       context.strokeStyle = '#2ECCFA';
       context.stroke();
-      //the fish
+    /*  //the fish
     base_image = new Image();
-  base_image.src = 'guldfisk.png';
-  context.drawImage(base_image, 600, 250, 50, 50);
-
+    base_image.src = 'guldfisk.png';
+    context.drawImage(base_image, 600, 250, 50, 50);
+*/
 //base_image.style.left = (base_image.style.left+10)+'px'; // pseudo-property code: Move right by 10px
 //setTimeout(doMove,20); // call doMove() in 20 msec
 
@@ -149,6 +151,7 @@ function switch_style ( css_title )
     set_cookie( style_cookie_name, css_title,
       style_cookie_duration );
   }
+<<<<<<< HEAD
 }
 function set_style_from_cookie()
 {
@@ -169,6 +172,28 @@ function set_cookie ( cookie_name, cookie_value,
                        24 * lifespan_in_days +
                        "; path=/" + domain_string ;
 }
+=======
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+ 
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+>>>>>>> 585d519882bf9210c0ec1c3b95f4236382e3b0d8
 function get_cookie ( cookie_name )
 {
  
@@ -189,12 +214,22 @@ function cloudColorBlue(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
  play_single_sound3();
+<<<<<<< HEAD
      $('#successMessage').show();
+=======
+ alert("JA");
+  //   $('#successMessage').show();
+>>>>>>> 585d519882bf9210c0ec1c3b95f4236382e3b0d8
 
 }
 else {
    play_single_sound2(); 
+<<<<<<< HEAD
   $('#failureMessage').show();
+=======
+    alert("NEJ");
+  //$('#failureMessage').show();
+>>>>>>> 585d519882bf9210c0ec1c3b95f4236382e3b0d8
 
 }
 
@@ -202,13 +237,24 @@ else {
 function cloudColorWhite(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
+<<<<<<< HEAD
  play_single_sound2(); 
  $('#failureMessage').show();
+=======
+ play_single_sound2();
+  alert("NEJ"); 
+ //$('#failureMessage').show();
+>>>>>>> 585d519882bf9210c0ec1c3b95f4236382e3b0d8
 
 }
 else {
   play_single_sound3();
+<<<<<<< HEAD
      $('#successMessage').show();
+=======
+   alert("JA");
+    // $('#successMessage').show();
+>>>>>>> 585d519882bf9210c0ec1c3b95f4236382e3b0d8
 
 }
 }
