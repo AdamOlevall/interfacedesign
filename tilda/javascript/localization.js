@@ -1,6 +1,6 @@
 	var productCategoryClass;
-	var langPack_en = {	click: "tryck",
-						myFavorites: "My Favorites",
+	var langPack_en = {	tryck: "click",
+						hur: "how",
 						myFavoritesTwo: "*My Favorites*",
 						categories: "Categories",
 						cartName: "Name",
@@ -44,8 +44,8 @@
 						};
 						
     var langPack_sv = { click: "tryck",
-						myFavorites: "Mina favoriter",
-						myFavoritesTwo: "*Mina favoriter*",
+						learn: "lära",
+						how: "hur*",
 						categories: "kategorier",
 						cartName: "Namn",
 						cartQuantity: "Mängd",
