@@ -1,18 +1,46 @@
 <html>
 <head>
       <meta charset="utf-8"/>
-<link rel="stylesheet" href="if.css">
+     <!-- <meta http-equiv="Default-Style" content="white">-->
+
+
+<link id="css" rel="stylesheet" href="if.css" title="white">
+<link id="css" rel="alternate stylesheet" href="ifblack.css" title="black">
 <link id="css" rel="stylesheet" href="groda.css">
-<link id="css" rel="stylesheet" href="greybird.css">
+
+<!--<link id="css" rel="stylesheet" href="greybird.css">
 <link id="css" rel="stylesheet" href="helicopter.css">
-<link id="css" rel="stylesheet" href="blackbird.css">
+<link id="css" rel="stylesheet" href="blackbird.css"> -->
+
+
 <script type="text/javascript" src="if.js"></script>
+<!--<script src="../tilda/javascript/start.js"></script> -->
   <audio id="frog" src="frog.mp3" preload="auto"></audio>
      <audio id="lose" src="lose.mp3" preload="auto"></audio>
       <audio id="mario" src="mario.mp3" preload="auto"></audio>
-
-
-
+<!--<script> 
+if (window.localStorage.getItem("backColor") == 'white') {
+  alert("white");
+    switch_style ('white');
+}
+else {
+    alert("black");
+switch_style ('black');
+} 
+</script> -->
+<!--
+ <script>
+        
+        $(document).ready(function() {
+            var local_col = window.localStorage.getItem("backColor");
+           if (local_col == "white") {
+                $("content").css("background",rgba(255, 255, 255, 0.3));
+}
+            else {
+                $("content").css("background",rgba(0, 0, 0, 0.3)); 
+    }
+            });
+    </script> -->
 </head>
 
 <body id="body" onload="draw(randomNumber)">
@@ -26,7 +54,11 @@
   
 <div id="content"> 
       <div id="title">
+
+         <p id="txt" align="center">If the cloud is blue, click at the black bird else click at the helicopter</p></div>  
+
          <p id="txt" align="center" data-i18n="textif.txt">If the cloud is blue, click at the blue bird else click at the red bird</p></div>  
+
       <div id="canvas">
             <canvas id="myCanvas" width="500" height="180" > </canvas> 
       </div> 
@@ -40,14 +72,25 @@
   </div>
 </div>
 
+<div id="successMessage" style="display:none;">
+        <h2>You did it!</h2>
+        <button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
+        <button id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button>   <!-- HÄR SKA TILL STARTSIDA-->
+      </div>
+
+      <div id="failureMessage" style="display:none;">
+        <h2>You blew it!</h2>
+        <button id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
+        <button id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button> <!-- HÄR SKA TILL STARTSIDA-->
+      </div>
    <!-- <div ID="myDiv" height:"250" width:"250" filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src="flygplan.png",sizingMethod='scale');></DIV> -->
      <div id="bird">
             <img src="http://s15.postimage.org/kozhy0eon/pajaro.gif" id="pajaro" class="piopio" >
       </div>
 
-       <div class="birds">
+  <!--     <div class="birds">
          <img class= "redbird" src="redbird.png" height="13%" width="8%" ></img>
-         <img class= "bluebird" src="bluebird.png" height="13%" width="8%" ></img>
+         <img class= "bluebird" src="bluebird.png" height="13%" width="8%" ></img> -->
 
   <!--   <div id="buttons"> 
             <button class="btn" onclick="cloudColorBlue(randomNumber)">Blue Cloud</button>

@@ -326,3 +326,266 @@ div {
     50% {top: -50px;}
     100% {top: 0px;}
 }
+
+
+/*SLUT GRODA, START GREYBIRD*/
+
+.piopio{
+  position:fixed;
+}
+#pajaro{
+  left:100%;
+  -moz-animation:volar 5s infinite;
+  -webkit-animation: volar 5s infinite;
+  -o-animation:volar 5s infinite;
+  -ms-animation:volar 5s infinite;
+  -khtml-animation:volar 5s infinite;
+  animation:volar 5s infinite;
+}
+@-moz-keyframes volar{
+  0%{
+    top:5px;
+  }25%{
+    top:100px;
+  }50%{
+    top:80px;
+  }75%{
+    top:25px;
+  }100%{
+    left:-177px;
+    top:102px;
+  }
+}
+@-webkit-keyframes volar{
+  0%{
+    margin-left:100%;
+    top:5px;
+  }25%{
+    top:100px;
+  }50%{
+    top:80px;
+  }75%{
+    top:25px;
+  }100%{
+    left:-177px;
+    top:102px;
+  }
+}
+@-o-keyframes volar{
+  0%{
+    top:5px;
+  }25%{
+    top:100px;
+  }50%{
+    top:80px;
+  }75%{
+    top:25px;
+  }100%{
+    left:-177px;
+    top:102px;
+  }
+}
+@-ms-keyframes volar{
+  0%{
+    top:5px;
+  }25%{
+    top:100px;
+  }50%{
+    top:80px;
+  }75%{
+    top:25px;
+  }100%{
+    left:-177px;
+    top:102px;
+  }
+}
+@-khtml-keyframes volar{
+  0%{
+    top:5px;
+  }25%{
+    top:100px;
+  }50%{
+    top:80px;
+  }75%{
+    top:25px;
+  }100%{
+    left:-177px;
+    top:102px;
+  }
+}
+@keyframes volar{
+  0%{
+    left:100%;
+    top:5px;
+  }25%{
+    top:100px;
+  }50px{
+    top:80px;
+  }75%{
+    top:25px;
+  }100%{
+    left:-177px;
+    top:102px;
+  }
+}
+
+/*SLUT GRODA, START HELICOPTER*/
+
+
+
+div {
+ 
+  box-sizing: border-box;
+ 
+}
+
+
+
+@-webkit-keyframes spin {
+  from {
+    transform:rotateY(0deg);
+  }
+
+  to {
+     transform:rotateY(-360deg);
+  }
+}
+
+@-webkit-keyframes tailblade {
+  from {
+    transform:rotate3d(0,0,1,0deg);
+  }
+
+  to {
+     transform:rotate3d(0,0,1,-360deg);
+  }
+}
+@-webkit-keyframes float {
+  from {
+    transform:translateY(8px) rotate3d(0,0,1,3deg);
+  }
+
+  to {
+     transform:translateY(-8px) rotate3d(0,0,1,0deg);
+  }
+}
+
+
+.helicopter_wrapper{
+  transform: scale(2);
+  position:absolute;
+  top:30%;
+  left:70%;
+
+}
+
+.helicopter {
+  position:relative;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: float;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+
+
+
+.blade {
+  position:absolute;
+  top:0px;
+  left:31px;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-name: spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-play-state: running;
+}
+.tailblade{
+  width:3px;
+  height:7px;
+  background-color: red;
+  position:absolute;
+  top:9px;
+  left:10px;
+  -webkit-transform-origin:50% 100%;
+  -webkit-animation-duration: .1s;
+  -webkit-animation-name: tailblade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-play-state: running;
+}
+
+/*SLUT HELICOPTER, START BLACKBIRD*/
+
+
+
+
+.pajaro{
+  background:black;
+  border-radius: 50% 50% 20% 20%;
+  color:white;
+  line-height:20px;
+  letter-spacing: 2px;
+  font-size:0.8em;
+  text-align:center;
+  position:absolute;
+  top:60%; left:60%;
+  margin-top:-20px; margin-left:-10px;
+  width:15px; height:15px;
+  -webkit-animation:planeo 0.8s linear infinite;
+  z-index:999;
+}
+
+.pajaro:after,
+.pajaro:before{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+}
+
+/*------------------------------------------------------ bird wings
+*/
+
+.pajaro:after{
+  border-radius: 100% 100% 0 0;
+  box-shadow: inset 0px 5px 0 black;
+  width:100px; height:100px;
+  margin-top:-7px; margin-left:-50px;
+  -webkit-transform-origin: 100% 0%;
+  -webkit-animation:alas 3s linear infinite;
+}
+
+/*------------------------------------------------------ bird beak
+*/
+
+.pajaro:before{
+  background:#FFC37F;
+  border-radius: 100% 0% 20% 0%;
+  margin-top:3px; margin-left:-4px;
+  width:6px; height:6px;
+  -webkit-transform:rotateZ(45deg);
+}
+
+/*------------------------------------------------------ wings animation
+*/
+
+@-webkit-keyframes alas {
+  50%{
+    transform:rotateX(-1440deg);
+  }
+}
+
+/*------------------------------------------------------ bird animation
+*/
+
+@-webkit-keyframes planeo {
+  40%{
+    transform:rotateZ(2deg) translateX(2px) translateY(10px) translateZ(0);
+    line-height:16px;
+    font-size:0.6em;
+  }
+  80%{
+    transform:rotateZ(-2deg) translateX(5px) translateY(8px) translateZ(0);
+  }
+}
