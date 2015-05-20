@@ -1,3 +1,4 @@
+var backgroundColor;
 function draw() {
   var canvas = document.getElementById('balloon');
   if (canvas.getContext) {
@@ -18,26 +19,35 @@ function draw() {
   }
 }
 
-function changeThemeRed() {
-window.localStorage.setItem("backgroundColor", "black");
+
+function changeThemeWhite() {
+  backgroundColor = "white";
+ window.localStorage.setItem("backColor", "white");
+/*if (window.localStorage.getItem("backgroundColor") == 'white'){
+  alert("white");
+}
+else {
+  alert("notwhite");
+} */
 }
 
-function changeThemeGreen() {
-
+function changeThemeBlack() {
+   backgroundColor = "black";
+window.localStorage.setItem("backColor", "black");
+/*if (window.localStorage.getItem("backgroundColor") == 'black'){
+  alert("black");
 }
-// *** TO BE CUSTOMISED ***
+else {
+  alert("notblack");
+} */
+}
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
 
-// *** END OF CUSTOMISABLE SECTION ***
-// You do not need to customise anything below this line
-
 function switch_style ( css_title )
 {
-// You may use this script on your site free of charge provided
-// you do not remove this notice or the URL below. Script from
-// http://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+
   var i, link_tag ;
   for (i = 0, link_tag = document.getElementsByTagName("link") ;
     i < link_tag.length ; i++ ) {
@@ -62,7 +72,7 @@ function set_style_from_cookie()
 function set_cookie ( cookie_name, cookie_value,
     lifespan_in_days, valid_domain )
 {
-    // http://www.thesitewizard.com/javascripts/cookies.shtml
+ 
     var domain_string = valid_domain ?
                        ("; domain=" + valid_domain) : '' ;
     document.cookie = cookie_name +
@@ -73,7 +83,7 @@ function set_cookie ( cookie_name, cookie_value,
 }
 function get_cookie ( cookie_name )
 {
-    // http://www.thesitewizard.com/javascripts/cookies.shtml
+ 
     var cookie_string = document.cookie ;
     if (cookie_string.length != 0) {
         var cookie_value = cookie_string.match (

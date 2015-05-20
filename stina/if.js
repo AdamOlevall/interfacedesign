@@ -25,14 +25,23 @@ function play_single_sound3() {
 
 var randomNumber = Math.floor((Math.random() * 10) + 1);
 
-
 function draw(randomNumber) {
      var canvas = document.getElementById('myCanvas');
      var context = canvas.getContext('2d'); 
     // var numb = Math.floor((Math.random() * 10) + 1);
      setInterval(animation, 30);
-   
+  
 ///draw the box
+
+
+
+//var change_theme;
+/*
+
+*/
+
+
+
       context.rect(0,0,100,100);
       context.fillStyle="rgba(0, 0, 0, 0)";
       context.fill();
@@ -48,17 +57,7 @@ function draw(randomNumber) {
       context.bezierCurveTo(430, 40, 370, 30, 340, 50);
       context.bezierCurveTo(320, 5, 250, 20, 250, 50);
       context.bezierCurveTo(200, 5, 150, 20, 170, 80);
-/*
-         context.beginPath();
-      context.moveTo(100, 80);
-      context.bezierCurveTo(60, 100, 60, 150, 160, 150);
-      context.bezierCurveTo(180, 180, 250, 180, 170, 150);
-      context.bezierCurveTo(350, 150, 350, 120, 320, 100);
-      context.bezierCurveTo(360, 40, 300, 30, 270, 50);
-      context.bezierCurveTo(250, 5, 180, 20, 180, 50);
-      context.bezierCurveTo(130, 5, 80, 20, 100, 80);
 
-*/
 /// complete custom shape
 var numb = randomNumber;
       context.lineWidth = 5;
@@ -118,18 +117,84 @@ if (numb < 6) {
     //  context.strokeStyle = '#003300';
    //   context.stroke();
    //return numb;
+//alert("hej");
+
+
+  if (window.localStorage.getItem("backColor") == 'white'){
+  switch_style ('white');
+  }
+  else {
+  switch_style ('black');
+      } 
+} 
+
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 30 ;
+
+function switch_style ( css_title )
+{
+
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+   i < link_tag.length ; i++ ) {
+
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration );
+  }
 }
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+ 
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+ 
+    var cookie_string = document.cookie ;
+    if (cookie_string.length != 0) {
+        var cookie_value = cookie_string.match (
+                        '(^|;)[\s]*' +
+                        cookie_name +
+                        '=([^;]*)' );
+        return decodeURIComponent ( cookie_value[2] ) ;
+    }
+    return '' ;
+}
+
+
 
 function cloudColorBlue(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
  play_single_sound3();
-  alert("Very good");
+     $('#successMessage').show();
 
 }
 else {
    play_single_sound2(); 
-  alert("Wrong");
+  $('#failureMessage').show();
 
 }
 
@@ -138,12 +203,12 @@ function cloudColorWhite(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
  play_single_sound2(); 
- alert("Wrong");
+ $('#failureMessage').show();
 
 }
 else {
   play_single_sound3();
-  alert("Very Good");
+     $('#successMessage').show();
 
 }
 }
@@ -170,51 +235,6 @@ function animation(){
   }
 }
 
-window.onload = function () {
-  var dragElements = document.getElementById('#drag-elements li');
-  // var dragElements = document.querySelectorAll('#drag-elements li');
-    var elementDragged = null;
-   var draggable = document.getElementById(".mike");
-
-    draggable.addEventListener('dragstart', dragStart, false);
-    draggable.addEventListener('dragend'  , dragEnd  , false);
-
-    var droptarget = document.getElementById(".helicopter");
-
-    droptarget.addEventListener('dragenter', dragEnter  , false);
-    droptarget.addEventListener('dragover' , dragOver   , false);
-    droptarget.addEventListener('dragleave', dragLeave  , false);
-    droptarget.addEventListener('drop'     , drop       , false);
-
-
-    /* Draggable event handlers */
-    function dragStart(event) {
-    }
-
-    function dragEnd(event) {
-
-    }
-
-    /* Drop target event handlers */
-    function dragEnter(event) {
-    
-    }
-
-    function dragOver(event) {
-        event.preventDefault();
-        return false;
-    }
-
-    function dragLeave(event) {
-    }
-
-    function drop(event) {
-       // event.preventDefault();
-    dragElements.removeChild(elementDragged);
-        //document.getElementById(".mike").groda.css.visibility = hidden;
-        return false;
-    }
-}
 /*
    if ( event.target.className == "helicopter" ) {
        document.getElementById("helicopter").style.fontSize = "larger";
