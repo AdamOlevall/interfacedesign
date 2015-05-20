@@ -30,22 +30,10 @@ function draw(randomNumber) {
      var context = canvas.getContext('2d'); 
     // var numb = Math.floor((Math.random() * 10) + 1);
      setInterval(animation, 30);
-  
-///draw the box
-
-
-
-//var change_theme;
-/*
-
-*/
-
-
 
       context.rect(0,0,100,100);
       context.fillStyle="rgba(0, 0, 0, 0)";
       context.fill();
-
 
 ///draw the cloud
 
@@ -59,10 +47,10 @@ function draw(randomNumber) {
       context.bezierCurveTo(200, 5, 150, 20, 170, 80);
 
 /// complete custom shape
-var numb = randomNumber;
+      var numb = randomNumber;
       context.lineWidth = 5;
 // choose color for the cloud and fill it
-if (numb < 6) {
+    if (numb < 6) {
     context.fillStyle = '#8ED6FF';
 
   } else {
@@ -71,11 +59,11 @@ if (numb < 6) {
       context.fill();
       context.strokeStyle = '#2ECCFA';
       context.stroke();
-      //the fish
+    /*  //the fish
     base_image = new Image();
-  base_image.src = 'guldfisk.png';
-  context.drawImage(base_image, 600, 250, 50, 50);
-
+    base_image.src = 'guldfisk.png';
+    context.drawImage(base_image, 600, 250, 50, 50);
+*/
 //base_image.style.left = (base_image.style.left+10)+'px'; // pseudo-property code: Move right by 10px
 //setTimeout(doMove,20); // call doMove() in 20 msec
 
@@ -189,12 +177,14 @@ function cloudColorBlue(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
  play_single_sound3();
-     $('#successMessage').show();
+ alert("JA");
+  //   $('#successMessage').show();
 
 }
 else {
    play_single_sound2(); 
-  $('#failureMessage').show();
+    alert("NEJ");
+  //$('#failureMessage').show();
 
 }
 
@@ -202,13 +192,15 @@ else {
 function cloudColorWhite(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
- play_single_sound2(); 
- $('#failureMessage').show();
+ play_single_sound2();
+  alert("NEJ"); 
+ //$('#failureMessage').show();
 
 }
 else {
   play_single_sound3();
-     $('#successMessage').show();
+   alert("JA");
+    // $('#successMessage').show();
 
 }
 }
