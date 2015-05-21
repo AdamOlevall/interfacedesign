@@ -20,11 +20,9 @@
                   'txt3': "Let's try something little more advanced!",
                   'txt4': 'While the brightest ball is placed to the left, put Froggy in the woods. Otherwise, put him in the dessert',
                   'txt5': 'Oh no you lost, click me to try again',
-                  'txt6': 'Yey you completed the While game, click me to try another game',
+                  'txt6': 'Go to next level',
                   'txt7': 'Quack',
-                  'txt8': 'Oh no you lost, click me to try again',
-				  'txt9': 'Yey you made it, click me to go to the next level'
-
+                  'txt8': 'Try Again'
             },
 
 
@@ -82,10 +80,10 @@
                   'txt3': 'Nu försöker vi med något lite svårare!',
                   'txt4': 'Medans den ljusaste bollen är längst till vänster, släpp Froggy i skogen. Annars, släpp honom i öknen',
                   'txt5': 'Åh nej du förlorade! Tryck på mig för att försöka igen',
-                  'txt6': 'Ja! Du klarade While-spelet. Tryck på mig för att prova ett annat spel',
+                  'txt6': 'Gå till nästa nivå',
                   'txt7' : 'Kvack',
-                  'txt8': 'Åh nej du förlorade! Tryck på mig för att försöka igen',
-				  'txt9': 'Ja! Du klarade första nivån. Tryck på mig för att få till nästa nivå'
+                  'txt8': 'Försök igen'
+			
 
 				
             },

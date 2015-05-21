@@ -27,8 +27,19 @@
           <p id="txt" data-i18n="textwhile.txt3">Let's try something little more advanced!</p>
           <p id="txt" data-i18n="textwhile.txt4">While the brightest ball is placed to the left, put Froggy in the woods. Otherwise, put him in the dessert</p>
         </div>
-        <p id="heej" data-i18n="textwhile.txt5">Oh no you lost, click me to try again</p>
-      <p id="heej2" data-i18n="textwhile.txt6">Yey you completed the While game, click me to try another game</p>
+       <div id="successMessage" style="display:none;">
+        <h2 data-i18n="textifwhilefor.txt7">You did it!</h2>
+        <button data-i18n="textifwhilefor.txt8" id="B1"class="button" onclick="location.href = 'while.html';">Play Again</button>
+        <button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button>  
+      </div>
+
+  <!-- failure message -->
+      <div id="failureMessage" style="display:none;">
+        <h2 data-i18n="textifwhilefor.txt6">You lost!</h2>
+        <button data-i18n="textwhile.txt8" id="B1"class="button" onclick="location.href = 'while.html';">Try Again</button>
+        <button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button> 
+      </div>
+
         <div id="dd-elements" class="clearfix">
             <ul id="drag-elements">
                 <li draggable="true"><div class="mike">

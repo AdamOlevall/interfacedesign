@@ -135,19 +135,10 @@ function minFunk() {
 }
 
 function minFunk2() {
-    var $p = $('#heej2');
-    $p.css('visibility', 'visible');
+    $('#successMessage').show();
 }
 
 
-$("#heej").click(function(){
-   location.reload();
-});
-
-
-$("#heej2").click(function(){
-  document.location.href = 'while.html';
-});
 
 
 var style_cookie_name = "style" ;
