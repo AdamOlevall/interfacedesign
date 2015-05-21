@@ -1,0 +1,132 @@
+.wrapper{
+	background-image: url("../images/grass.jpg");
+
+	background-repeat: no-repeat;
+	/*width: 1420px;
+	height: 700px;*/
+		width: 100%;
+		height: 750px;
+		width: 100%;
+	height: 750px;
+	/*height: 100%;*/
+}
+
+#header {
+	background-color: none;
+	width: 100%;
+	height: 40px;
+	display: inline-block;
+}
+
+#tutorial {
+display: inline-block;
+position: absolute;
+top: 10%;
+left: 40%;
+
+}
+
+#content {
+	background: rgba(0, 0, 0, 0.3);
+	position: relative;
+	top: 0%;
+	left: 7%;
+	width: 85%;
+	right: 7%;
+	height: 86%;
+	/*margin-right: 7%;*/
+
+	display: inline-block;
+	border-radius: 30px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+#txt {
+	position: relative;
+	width: 100%;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 2vmin;
+	text-align: center;
+	margin-top: 5%;
+}
+
+
+
+#canvasDiv {
+float: left;
+width: 50%;
+height: 70%;
+display: inline-block;
+position: relative;
+display: inline-block;
+}
+
+
+
+#gameDiv {
+float: right;
+margin-right: 3%;
+margin-top:2%;
+
+}
+
+#canvas{
+position: relative;
+margin-top: 1%;
+/*width: 70%;
+height: 75%;*/
+/*margin-right: 0%;
+margin-bottom: 0%;*/
+border-style: solid;
+border-radius: 7%;
+}
+
+#canvasHeart {
+margin-top: 3%;
+margin-right: 0%;
+display: inline-block;
+
+}
+
+#canvasSpeech {
+	position: relative;
+	left: 20%;
+	top: -20%;
+}
+
+
+ 
+ #button {
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  font-family: Courier New;
+  color: #000000;
+  font-size: 3vmin;
+  background: #ddfa5c;
+  text-decoration: none;
+  border: none;
+  position: relative;
+  margin-left: 40%;
+  margin-right: 40%;
+
+}
+
+#button:hover {
+  text-decoration: none;
+    background: #34d939;
+
+}
+
+
+
+.mike {
+	position: relative;
+	float: left;
+	left: 15%;
+	top: 60%;
+	width: 20%;
+	height: 30%;
+
+}

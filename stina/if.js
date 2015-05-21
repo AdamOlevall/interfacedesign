@@ -177,14 +177,14 @@ function cloudColorBlue(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
  play_single_sound3();
- alert("JA");
-  //   $('#successMessage').show();
+// alert("JA");
+     $('#successMessage').show();
 
 }
 else {
    play_single_sound2(); 
-    alert("NEJ");
-  //$('#failureMessage').show();
+   // alert("NEJ");
+  $('#failureMessage').show();
 
 }
 
@@ -193,14 +193,14 @@ function cloudColorWhite(randomNumber) {
 var nummer = randomNumber;
 if (nummer < 6) {
  play_single_sound2();
-  alert("NEJ"); 
- //$('#failureMessage').show();
+ // alert("NEJ"); 
+ $('#failureMessage').show();
 
 }
 else {
   play_single_sound3();
-   alert("JA");
-    // $('#successMessage').show();
+   //alert("JA");
+     $('#successMessage').show();
 
 }
 }
