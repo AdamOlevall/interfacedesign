@@ -47,12 +47,7 @@ function draw() {
 function flower(xoff, yoff) {
 
   
-     if (window.localStorage.getItem("backColor") == 'white'){
-  switch_style ('white');
-  }
-  else {
-  switch_style ('black');
-      } 
+     
     var canvas = document.getElementById("canvas");
 
     var ctx = canvas.getContext('2d');
@@ -97,13 +92,13 @@ function flower(xoff, yoff) {
  
 });*/
 
-
-  if (window.localStorage.getItem("backColor") == 'white'){
+if (window.localStorage.getItem("backColor") == 'white'){
   switch_style ('white');
   }
   else {
   switch_style ('black');
       } 
+  
 }   
  /*
 function listner() {
