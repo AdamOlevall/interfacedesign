@@ -3,6 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
 <title>Code With Froggy</title>
+	
+	<audio id="frog" src="frog.mp3" preload="auto"></audio>
+	<audio id="mario" src="mario.mp3" preload="auto"></audio>
+	<audio id="lose" src="lose.mp3" preload="auto"></audio>
+
     <link id="css "href="3ifwhilefor.css" rel="stylesheet">
     <link id="css" href="groda.css" rel="stylesheet">
     <link id="css" rel="alternate stylesheet" href="3ifwhilefor2.css" title="black">
@@ -13,8 +18,8 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 
-
 </head>
+
 <body>
 	<div  class="wrapper">
 	<canvas id="canvasWin" style="display:none"></canvas>
@@ -26,25 +31,25 @@
 <!-- Success message -->
 		<div id="successMessage" style="display:none;">
     		<h2 data-i18n="textifwhilefor.txt7">You did it!</h2>
-   			<button data-i18n="textifwhilefor.txt8" id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
-   			<button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button>  
+   			<button data-i18n="textifwhilefor.txt8" id="B1"class="button" onclick="location.href = '3ifwhilefor.html';play_frog();">Play Again</button>
+   			<button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';play_frog();">Back</button>  
   		</div>
 
   <!-- failure message -->
   		<div id="failureMessage" style="display:none;">
   			<h2 data-i18n="textifwhilefor.txt6">You lost!</h2>
-  			<button data-i18n="textifwhilefor.txt8" id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
-   			<button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button> 
+  			<button data-i18n="textifwhilefor.txt8" id="B1"class="button" onclick="location.href = '3ifwhilefor.html';play_frog();">Play Again</button>
+   			<button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';play_frog();">Back</button> 
   		</div>
 
   <!--Start message-->
 		<div id="startMessage">
 
 			<h2 data-i18n="textifwhilefor.txt">If the puzzle is not solved, and while there is time, help Froggy solve it.</h2>
-  			<button  data-i18n="textifwhilefor.txt2" id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();">Start</button>
-			<button  data-i18n="textifwhilefor.txt3" id="B1"class="button1" onclick="help();">Help</button>
+  			<button  data-i18n="textifwhilefor.txt2" id="B1"class="button1" onclick="startGame();canvasDrawLoose();CanvasDrawWin();play_frog();">Start</button>
+			<button  data-i18n="textifwhilefor.txt3" id="B1"class="button1" onclick="help();play_frog();">Help</button>
 			
-			<button   data-i18n="textifwhilefor.txt4" id="B2"class="button1" onclick="location.href = '../tilda/start.html';">Back</button> 
+			<button   data-i18n="textifwhilefor.txt4" id="B2"class="button1" onclick="location.href = '../tilda/start.html';play_frog();">Back</button> 
 
    			
   		</div>
@@ -70,7 +75,7 @@
 
 
 
-  		
+<!-- ************************************SQUARE ONE****************************-->  		
 
 <div id ="squareOne">
 		
@@ -93,6 +98,8 @@
 		
 		<div id ="dropNine" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
 </div>
+
+<!-- ************************************SQUARE TWO****************************-->  
 
 <div id ="squareTwo">
 		

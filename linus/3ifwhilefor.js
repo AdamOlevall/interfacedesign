@@ -9,7 +9,7 @@ function secondPassed() {
     }
     document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
     if (seconds == 0 && clicks != 9) {
-        
+        play_loose();
         $('#failureMessage').show();
         $('#canvasLoose').show();
         $('#mainen').hide();
@@ -32,6 +32,7 @@ function secondPassed() {
 function startGame(){
 
     $('#startMessage').hide();
+    play_frog();
     var countdownTimer = setInterval('secondPassed()', 1000);
    if (window.localStorage.getItem("backColor") == 'white'){
   switch_style ('white');
@@ -43,15 +44,14 @@ function startGame(){
 
 
 function help(){
-   // canvasDrawHelp();
+  
+    play_frog();
     canvasDrawHelp1();
-   // $('#canvasHelp').show();
     $('#canvasHelp1').show();
     $('#helpMessage').show(); 
     $('#mainen').hide();
     $('#header').hide();
     $('#startMessage').hide();
-    //Här ska en ok knapp visas -> back to start
 }
 
 function canvasDrawHelp1(){
@@ -59,20 +59,6 @@ function canvasDrawHelp1(){
     var ctx = c.getContext("2d");
   
 }
-
-/*
-function canvasDrawHelp(){
-    var c = document.getElementById("canvasHelp");
-    var ctx = c.getContext("2d");
-  
-
-}
-*/
-
-
-
-
-
 
 function canvasDrawLoose(){
     var c = document.getElementById("canvasLoose");
@@ -82,8 +68,6 @@ function canvasDrawLoose(){
     ctx.strokeStyle="gray";
     ctx.rect(20,20,90,120);
     ctx.stroke();
-
-
 }
 
 function canvasDrawWin(){
@@ -123,6 +107,7 @@ function drop(ev) {
 function checkWin(){
     if (clicks==9){
         seconds = 0;
+        play_win();
         $('#mainen').hide(); 
         $('#canvasWin').show();
         $('#successMessage').show();
@@ -130,6 +115,43 @@ function checkWin(){
         $('#clicks').hide();
     }
 }
+
+
+
+
+function play_loose() {
+        document.getElementById('lose').play();
+}
+
+function play_win() {
+        document.getElementById('mario').play();
+}
+
+function play_frog() {
+        document.getElementById('frog').play();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
