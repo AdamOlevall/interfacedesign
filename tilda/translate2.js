@@ -27,7 +27,7 @@
 
 
  			'textif':{
-            	  'txt': 'If the cloud is blue, click at the blue bird else click at the red bird'
+            	  'txt': 'If the cloud is blue, click at the black bird else click at the helicopter'
             },
 
 
@@ -45,8 +45,13 @@
 				'txt': 'If the puzzle is not solved, and while there is time, help Froggy solve it.',
 				'txt2': 'Start',
 				'txt3': 'Help',
-				'txt4': 'Back'
-			
+				'txt4': 'Back',
+				'txt5': 'Move the tiles from the left square to the right square, the picture should show Froggys friend Iggy',
+				'txt6': 'You lost!',
+				'txt7': 'You did it!',
+				'txt8': 'Play again',
+				'txt9': 'Ok. Got it!'
+				
 			}
 
 		
@@ -100,10 +105,14 @@
 
 
 				'txt': 'Om puzzlet inte är löst och medan det finns tid kvar, hjälp Froggy att lösa det',
-
 				'txt2': 'Börja',
 				'txt3': 'Hjälp',
-				'txt4': 'Tillbaka'
+				'txt4': 'Tillbaka',
+				'txt5': 'Flytta pusselbitarna från den vänstra rutan till den högra rutan, bilden ska visa Froggys kompis Iggy',
+				'txt6': 'Du förlorade!',
+				'txt7': 'Du klarade det!',
+				'txt8': 'Spela igen',
+				'txt9': 'Ok. Jag förstår!'
 			
 			},
 			

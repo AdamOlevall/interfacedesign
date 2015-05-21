@@ -397,11 +397,11 @@
 #helpMessage {
   position: absolute;
 
-  left: 30%;
+  left: 25%;
   top: 5%;
-  width: 38%;
+  width: 50%;
   height: 20%;
-  z-index: 100;
+  /*z-index: 100;*/
   background: #dfd;
   border: 2px solid #333;
   -moz-border-radius: 10px;
@@ -413,7 +413,7 @@
   padding: 20px;
 }
 
-#helpMessage p{
+#helpMessage h2{
 	
 	font-size: 3vmin;	
 	text-align: center;
@@ -461,9 +461,9 @@ Sen ska även canvasHelp1 justeras och bilderna ska läggas ihop fint! */
 	background-image: url("frog.png");
 	background-position: 0% 0%;
 	background-repeat: no-repeat;
-	background-size: cover;		
+	background-size: 100%;		
     width: 33%;
-    height: 72%;
+    height: 65%;
     position: absolute;
     left: 33%;
     top: 20%;
@@ -539,10 +539,11 @@ Sen ska även canvasHelp1 justeras och bilderna ska läggas ihop fint! */
 .button1{
 	position: relative;
 	width: 25%;	
-	height: 40%;
+	height: 30%;
 	margin-left: 6%;
 	margin-bottom: 5%;
 	margin-top:0%;
+	bottom: 3%;
 	text-align: center;
 	border-radius: 5%;
 	background-color:#44c767;
