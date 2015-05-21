@@ -5,16 +5,7 @@ var clicks = 0;
 var x =  Math.floor((Math.random() * 9) + 1);
 var y = x-1;
 var z = x-2;
-function myCounter(){
-
-    clicks += 1;
-    document.getElementById("clicks").innerHTML = clicks;
-    mainFunction();
-   if (clicks > x){
-    minFunk();
-}
-
-}
+var p=  x+1;
 
 function play_single_sound() {
         document.getElementById('frog').play();
@@ -32,11 +23,35 @@ function play_single_sound4() {
         document.getElementById('synth').play();
 } 
 
+
+
+function myCounter(){
+     
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+    mainFunction();
+
+     if (clicks >x){
+    minFunk();
+}
+
+     if(clicks<p){
+           play_single_sound(); 
+         
+         }
+         else{
+            play_single_sound2();
+         }
+ 
+}
+
+
 function myFinish(){
 
 if(clicks > y){
     minFunk2();
     play_single_sound3();
+
 }
 else {
    minFunk();
