@@ -29,7 +29,7 @@
 
 
  			'textif':{
-            	  'txt': 'If the cloud is blue, click at the blue bird else click at the red bird'
+            	  'txt': 'If the cloud is blue, click at the black bird else click at the helicopter'
             },
 
 

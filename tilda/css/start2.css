@@ -105,7 +105,11 @@
 	width: 50%;
 }
 
+
 #txt , #txt2{
+ {
+outline-color: white;
+
 	font-size: 2vmin;
 	text-align: center;
 	/*position: relative;
