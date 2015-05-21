@@ -92,7 +92,7 @@
 
 
 			'textif': {
-				'txt': 'Om molnet är blått, tryck på den blåa fågeln annars tryck på den röda fågeln'
+				'txt': 'Om molnet är blått, tryck på den svarta fågeln annars tryck på helikoptern'
 
 					},
         
