@@ -25,7 +25,7 @@
 #white {
 	transform: scale(0.8);
 	position: relative;
-	left: 0%;
+	left: 4%;
 	display: inline-block;
 	margin-top: 2%;
 	margin-bottom: 1%;
@@ -37,7 +37,7 @@
 #black {
 	transform: scale(1.7);
 	position: relative;
-	left: 1%;
+	left: 6%;
 	display: inline-block;
 	margin-top: 2%;
 	margin-bottom: 1%;

@@ -17,6 +17,12 @@ function draw() {
 
     ctx.stroke();
   }
+   if (window.localStorage.getItem("backColor") == 'white'){
+  switch_style ('white');
+  }
+  else {
+  switch_style ('black');
+      } 
 }
 
 
