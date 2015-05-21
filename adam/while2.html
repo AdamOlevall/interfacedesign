@@ -49,8 +49,19 @@
           <p id="txt" data-i18n="textwhile.txt"> Let's start with a very basic example</p>
           <p id="txt" data-i18n="textwhile.txt2">While the circle is purple, push Quack . When it change color push Mjau</p>
         </div>
-<p id="heej">Oh no you lost, click me to try again</p>
-<p id="heej2">Yey you made it, click me to go to the next level</p>
+<div id="successMessage" style="display:none;">
+        <h2 data-i18n="textifwhilefor.txt7">You did it!</h2>
+        <button data-i18n="textifwhilefor.txt8" id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
+        <button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button>  
+      </div>
+
+  <!-- failure message -->
+      <div id="failureMessage" style="display:none;">
+        <h2 data-i18n="textifwhilefor.txt6">You lost!</h2>
+        <button data-i18n="textifwhilefor.txt8" id="B1"class="button" onclick="location.href = '3ifwhilefor.html';">Play Again</button>
+        <button data-i18n="textifwhilefor.txt4" id="B2"class="button" onclick="location.href = '../tilda/start.html';">Back</button> 
+      </div>
+      
 <div class = "knappar">
 	<button class = "btn" onclick="myCounter()" data-i18n="textwhile.txt7"> Quack </button>
 <button class = "btn2" onclick="myFinish()"> Mjau </button>

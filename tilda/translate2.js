@@ -10,7 +10,7 @@
 				'txt5': 'For',
 				'txt6': 'All',
 				'txt7': 'Need help?',
-				'txt8': 'Click me!'
+				'txt8': 'Click on me!'
 
 				            },
 
@@ -21,7 +21,9 @@
                   'txt4': 'While the brightest ball is placed to the left, put Froggy in the woods. Otherwise, put him in the dessert',
                   'txt5': 'Oh no you lost, click me to try again',
                   'txt6': 'Yey you completed the While game, click me to try another game',
-                  'txt7': 'Quack'
+                  'txt7': 'Quack',
+                  'txt8': 'Oh no you lost, click me to try again',
+				  'txt9': 'Yey you made it, click me to go to the next level'
 
             },
 
@@ -62,12 +64,12 @@
         translation: {
             
             'textstart': {
-				'txt': 'Lär dig hur man kodar',
-                'txt2': 'Klicka på en av stubbarna för att börja spela',
-                'txt4': 'Medans',
-				'txt5': 'För',
-				'txt3': 'Om',
-				'txt6': 'Alla',
+				'txt': 'Lär dig hur man kodar!',
+                'txt2': 'Klicka på en av stubbarna för att börja spela.',
+                'txt4': 'While',
+				'txt5': 'For',
+				'txt3': 'If',
+				'txt6': 'All',
 				'txt7': 'Vill du ha hjälp?',
 				'txt8': 'Klicka på mig!'
 				             
@@ -80,8 +82,10 @@
                   'txt3': 'Nu försöker vi med något lite svårare!',
                   'txt4': 'Medans den ljusaste bollen är längst till vänster, släpp Froggy i skogen. Annars, släpp honom i öknen',
                   'txt5': 'Åh nej du förlorade! Tryck på mig för att försöka igen',
-                  'txt6': 'Ja! Du klarade Medan-spelet. Tryck på mig för att prova ett annat spel',
-                  'txt7' : 'Kvack'
+                  'txt6': 'Ja! Du klarade While-spelet. Tryck på mig för att prova ett annat spel',
+                  'txt7' : 'Kvack',
+                  'txt8': 'Åh nej du förlorade! Tryck på mig för att försöka igen',
+				  'txt9': 'Ja! Du klarade första nivån. Tryck på mig för att få till nästa nivå'
 
 				
             },
@@ -95,7 +99,7 @@
 			
 			'textfor': {
 				'txt': 'Froggy känner sig ensam. Plocka några blommor för att muntra upp honom!',
-				'txt2': 'Froggys korg är tom. Så länga som summan av blommorna i korgen är mindre än 10, fortsätt att plocka!',
+				'txt2': 'Froggys korg är tom. Så länge summan av blommorna i korgen är mindre än 10, fortsätt att plocka!',
 				'txt3': 'Klar!'
 			
 			},
@@ -122,20 +126,7 @@
 				
 			},
 			
-			'admin': {
-				'shoppinglist': 'Inköpslista',
-				'users': 'Användare',
-				'orders': 'Orderhistorik'
-			},
 			
-			'confirmbutton': 'BEKRÄFTA KÖP',
-			
-			'logout': 'LOGGA UT',					
-			
-			'tabs': {
-				'theme': 'Teman',
-				'bar': 'baren'
-			}
         }
     }
 }

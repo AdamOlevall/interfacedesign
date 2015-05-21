@@ -125,8 +125,7 @@ function mainFunction() {
 
 
 function minFunk() {
-    var $p = $('#heej');
-    $p.css('visibility', 'visible');
+  $('#failureMessage').show();
 }
 
 function minFunk2() {
